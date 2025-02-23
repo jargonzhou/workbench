@@ -1,0 +1,22 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>200</x><y>80</y><w>100</w><h>40</h></coordinates><panel_attributes>halign=left
+/*Component*/
+--
+Operation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>210</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*ConcreteComponent*
+--
+Operation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>210</y><w>100</w><h>40</h></coordinates><panel_attributes>halign=left
+/*Decorator*/
+--
+Operation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>330</y><w>130</w><h>60</h></coordinates><panel_attributes>halign=left
+/*ConcreteDecoratorA*/
+--
+Operation()
+--
+addedState</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>330</y><w>130</w><h>60</h></coordinates><panel_attributes>halign=left
+/*ConcreteDecoratorB*/
+--
+Operation()
+AddedBahavior()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>110</y><w>100</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;80;60;10;60;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>110</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;90;60;90;100</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>240</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;50;10;50;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>240</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;90;50;90;90</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>80</y><w>200</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;
+m1=component
+m1pos=-5,-20</panel_attributes><additional_attributes>90;140;180;140;180;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>500</x><y>230</y><w>150</w><h>20</h></coordinates><panel_attributes>component-&gt;Operation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>500</x><y>350</y><w>150</w><h>40</h></coordinates><panel_attributes>Decorator::Operation()
+AddedBahavior()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>230</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>350</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element></diagram>

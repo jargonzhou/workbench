@@ -1,0 +1,11 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>150</x><y>170</y><w>100</w><h>30</h></coordinates><panel_attributes>*Client*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>90</y><w>100</w><h>30</h></coordinates><panel_attributes>*Context*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>180</y><w>150</w><h>40</h></coordinates><panel_attributes>halign=left
+/*AbstractExpression*/
+--
+/Interpret(Context)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>280</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*TerminalExpression*
+--
+Interpret(Context)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>280</y><w>160</w><h>40</h></coordinates><panel_attributes>halign=left
+*NonterminalExpression*
+--
+Interpret(Context)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>90</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;50;10;50;90;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>180</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>210</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;120;50;10;50;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>210</y><w>150</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;130;50;130;70</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>180</y><w>230</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;</panel_attributes><additional_attributes>130;110;210;110;210;10;10;10</additional_attributes></element></diagram>

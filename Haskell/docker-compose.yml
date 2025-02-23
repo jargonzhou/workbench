@@ -1,0 +1,9 @@
+services:
+  ihaskell:
+    image: gibiansky/ihaskell:20241105142103ae7283
+    container_name: ihaskell
+    restart: "always"
+    ports:
+      - "18888:8888"
+    volumes:
+      - $PWD:/home/jovyan/src

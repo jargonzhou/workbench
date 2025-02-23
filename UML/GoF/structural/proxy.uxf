@@ -1,0 +1,18 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>90</x><y>90</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=.
+*Client*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>90</y><w>100</w><h>60</h></coordinates><panel_attributes>halign=left
+/*Subject*/
+--
+/Request()/
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>220</y><w>100</w><h>60</h></coordinates><panel_attributes>halign=left
+*RealSubject*
+--
+Request()
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>220</y><w>100</w><h>60</h></coordinates><panel_attributes>halign=left
+*Proxy*
+--
+Request()
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>90</y><w>220</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>140</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;80;50;10;50;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>140</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;90;50;90;80</additional_attributes></element><element><id>UMLNote</id><coordinates><x>620</x><y>240</y><w>140</w><h>50</h></coordinates><panel_attributes>...
+realSubject-&gt;Request();
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>240</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>210</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+m2=realSubject
+m2pos=15,-20</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element></diagram>

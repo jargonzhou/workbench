@@ -1,0 +1,4 @@
+com\spike\microservice\dubbo\MicroserviceDubboApiStarter.class
+com\spike\microservice\dubbo\api\config\WebConfiguration.class
+com\spike\microservice\dubbo\api\config\DubboConfiguration.class
+com\spike\microservice\dubbo\api\support\interceptor\IncomingRequestHandlerInterceptor.class

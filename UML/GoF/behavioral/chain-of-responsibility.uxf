@@ -1,0 +1,12 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>150</x><y>130</y><w>100</w><h>30</h></coordinates><panel_attributes>*Client*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>130</y><w>120</w><h>40</h></coordinates><panel_attributes>halign=left
+/*Handler*/
+--
+/HandleRequest()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>260</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*ConcreteHandler1*
+--
+HandleRequest()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>260</y><w>120</w><h>40</h></coordinates><panel_attributes>halign=left
+*ConcreteHandler2*
+--
+HandleRequest()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>130</y><w>210</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>190;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>80</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+m2=successor
+m2pos=-5,-20</panel_attributes><additional_attributes>10;50;10;10;120;10;120;60;30;60</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>160</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;60;10;60;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>160</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;110;60;110;100</additional_attributes></element></diagram>

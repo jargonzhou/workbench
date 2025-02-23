@@ -1,0 +1,137 @@
+# c-s.pml
+
+$ spin c-s.pml
+      Client 0
+      Client 1
+      timeout
+#processes: 1
+  6:    proc  0 (Server:1) c-s.pml:6 (state 3) <valid end state>
+3 processes created
+
+$ spin c-s.pml
+      Client 1
+      Client 0
+      timeout
+#processes: 1
+  6:    proc  0 (Server:1) c-s.pml:6 (state 3) <valid end state>
+3 processes created
+
+# rendezvous.pml
+
+$ spin rendezvous.pml
+          Received message red, 20, 0
+      Sent message
+2 processes created
+
+$ spin rendezvous.pml
+      Sent message
+          Received message red, 20, 0
+2 processes created
+
+# reply.pml
+
+$ spin reply.pml
+      Client 1
+      Client 0
+      timeout
+#processes: 1
+  6:    proc  0 (Server:1) reply.pml:7 (state 4) <valid end state>
+3 processes created
+
+$ spin reply.pml
+      Client 0
+      Client 1
+      timeout
+#processes: 1
+  6:    proc  0 (Server:1) reply.pml:7 (state 4) <valid end state>
+3 processes created
+
+# local.pml
+
+$ spin local.pml
+      Client 3 processed by server 0
+                  Reply received from server 0 by client 3
+          Client 2 processed by server 1
+              Reply received from server 1 by client 2
+      timeout
+#processes: 2
+ 10:    proc  1 (Server:1) local.pml:7 (state 4) <valid end state>
+ 10:    proc  0 (Server:1) local.pml:7 (state 4) <valid end state>
+4 processes created
+
+$ spin local.pml
+          Client 3 processed by server 1
+      Client 2 processed by server 0
+                  Reply received from server 1 by client 3
+              Reply received from server 0 by client 2
+      timeout
+#processes: 2
+ 10:    proc  1 (Server:1) local.pml:7 (state 4) <valid end state>
+ 10:    proc  0 (Server:1) local.pml:7 (state 4) <valid end state>
+4 processes created
+
+# full-empty.pml
+
+$ spin full-empty.pml
+              Client 2 waiting for nonfull channel
+      No requests for server 0
+          No requests for server 1
+      Client 3 processed by server 0
+              Client 2 waiting for nonfull channel
+          No requests for server 1
+                  Reply received from server 0 by client 3
+              Client 2 waiting for nonfull channel
+...
+
+# random-recv.pml
+
+$ spin random-recv.pml
+          Client 4 processed by server 1
+      Client 2 processed by server 0
+                      Reply received from server 1 by client 4
+          Client 5 processed by server 1
+                          Reply received from server 1 by client 5
+          Client 3 processed by server 1
+              Reply received from server 0 by client 2
+                  Reply received from server 1 by client 3
+      timeout
+#processes: 2
+                queue 1 (request):
+                queue 2 (reply):
+ 28:    proc  1 (Server:1) random-recv.pml:7 (state 4) <valid end state>
+ 28:    proc  0 (Server:1) random-recv.pml:7 (state 4) <valid end state>
+6 processes created
+$ spin random-recv.pml
+      Client 5 processed by server 0
+          Client 4 processed by server 1
+                          Reply received from server 0 by client 5
+      Client 3 processed by server 0
+          Client 2 processed by server 1
+                  Reply received from server 0 by client 3
+                      Reply received from server 1 by client 4
+              Reply received from server 1 by client 2
+      timeout
+#processes: 2
+                queue 1 (request):
+                queue 2 (reply):
+ 28:    proc  1 (Server:1) random-recv.pml:7 (state 4) <valid end state>
+ 28:    proc  0 (Server:1) random-recv.pml:7 (state 4) <valid end state>
+6 processes created
+
+# sorted-send.pml
+
+$ spin sorted-send.pml
+      3
+      3
+      3
+1 process created
+$ spin sorted-send.pml
+      1
+      1
+      2
+1 process created
+$ spin sorted-send.pml
+      2
+      3
+      3
+1 process created

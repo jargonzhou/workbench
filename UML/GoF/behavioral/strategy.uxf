@@ -1,0 +1,21 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>1340</x><y>650</y><w>100</w><h>30</h></coordinates><panel_attributes>halign=left
+*Context*
+--
+ContextInterface()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>90</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+/*Strategy*/
+--
+/AlgorithmInterface()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>200</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*ConcreteStrategyA*
+--
+AlgorithmInterface()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>90</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*Context*
+--
+ContextInterface()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>200</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*ConcreteStrategyB*
+--
+AlgorithmInterface()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>200</y><w>130</w><h>40</h></coordinates><panel_attributes>halign=left
+*ConcreteStrategyC*
+--
+AlgorithmInterface()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>80</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;
+m1=strategy
+m1pos=5,-20</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>120</y><w>180</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;160;50;160;80</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>120</y><w>170</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;150;50;10;50;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>120</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>

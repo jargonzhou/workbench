@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "Debug ANTLR4 grammar",
+      "type": "antlr-debug",
+      "request": "launch",
+      // "input": "grammars/Expr.test",
+      "input": "${fileDirname}/${fileBasename}.test",
+      // "grammar": "grammars/Expr.g4",
+      "grammar": "${relativeFileDirname}/${fileBasename}",
+      // "startRule": "prog",
+      "startRule": "${input:fileBasenameNoExtensionLowerCase}",
+      "printParseTree": true,
+      "visualParseTree": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "fileBasenameNoExtensionLowerCase",
+      "type": "command",
+      "command": "extension.commandvariable.transform",
+      "args": {
+        "text": "${fileBasenameNoExtension|lowerCase}"
+      }
+    }
+  ]
+}

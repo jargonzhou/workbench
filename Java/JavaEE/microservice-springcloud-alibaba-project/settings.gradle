@@ -1,0 +1,10 @@
+rootProject.name = 'microservice-springcloud-alibaba-project'
+include 'nacosconfig'
+include 'nacosdiscovery-provider'
+include 'nacosdiscovery-consumer'
+include 'seata-order'
+include 'seata-storage'
+include 'seata-account'
+include 'mybatis-generator'
+include 'seata-business'
+

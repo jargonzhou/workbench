@@ -1,0 +1,9 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>160</y><w>160</w><h>110</h></coordinates><panel_attributes>halign=left
+*Singleton*
+--
+static Instance()
+SingletonOperation()
+GetSingletonData()
+--
+static uniqueInstance
+singletonData</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>450</x><y>180</y><w>140</w><h>30</h></coordinates><panel_attributes>return uniqueInstance</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>180</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element></diagram>

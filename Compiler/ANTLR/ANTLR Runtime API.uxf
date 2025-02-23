@@ -1,0 +1,102 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLNote</id><coordinates><x>170</x><y>130</y><w>260</w><h>30</h></coordinates><panel_attributes>org.antlr.v4.runtime
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>180</x><y>190</y><w>260</w><h>30</h></coordinates><panel_attributes>dfa: deterministic finite automate
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>180</x><y>160</y><w>260</w><h>30</h></coordinates><panel_attributes>atn: augmented transition network
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>180</x><y>220</y><w>260</w><h>30</h></coordinates><panel_attributes>misc: data structure, TestRig
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>180</x><y>250</y><w>260</w><h>30</h></coordinates><panel_attributes>tree: parse tree
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>210</y><w>80</w><h>30</h></coordinates><panel_attributes>Class</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>160</y><w>80</w><h>30</h></coordinates><panel_attributes>Constant
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>110</y><w>80</w><h>30</h></coordinates><panel_attributes>AbstractClass
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>60</y><w>80</w><h>30</h></coordinates><panel_attributes>/Interface/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>80</x><y>0</y><w>80</w><h>30</h></coordinates><panel_attributes>Legend
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>180</y><w>230</w><h>110</h></coordinates><panel_attributes>/TokenSource/
+bg=green
+--
+Token nextToken()
+int getLine()
+int getCharPositionInLine()
+CharStream getInputStream()
+TokenFactory&lt;?&gt; getTokenFactory()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>230</y><w>370</w><h>110</h></coordinates><panel_attributes>Recognizer&lt;Symbol, ATNInterpreter extends ATNSimulator&gt;
+bg=blue
+--
+ATNInterpreter _interp
+--
+String getGrammarFileName()
+ATN getATN()
+IntStream getInputStream()
+TokenFactory&lt;?&gt; getTokenFactory()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>150</y><w>110</w><h>60</h></coordinates><panel_attributes>atn.ATNSimulator
+bg=blue
+--
+ATN atn</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>510</y><w>110</w><h>30</h></coordinates><panel_attributes>Lexer
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>330</y><w>190</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m2=&lt;Integer, LexerATNSimulator&gt;
+m2pos=-15,-15
+</panel_attributes><additional_attributes>150;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>280</y><w>110</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;90;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1010</x><y>420</y><w>110</w><h>30</h></coordinates><panel_attributes>Parser
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>330</y><w>200</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m2=&lt;Token, ParserATNSimulator&gt;
+m2pos=15,-20</panel_attributes><additional_attributes>40;10;180;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>490</y><w>170</w><h>30</h></coordinates><panel_attributes>ParserInterpreter</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1060</x><y>440</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>350</y><w>160</w><h>90</h></coordinates><panel_attributes>/IntStream/
+bg=green
+--
+void consume()
+int LA(int i)
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>500</y><w>190</w><h>50</h></coordinates><panel_attributes>/CharStream/
+bg=green
+--
+String getText(Interval)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>500</y><w>190</w><h>50</h></coordinates><panel_attributes>/TokenStream/
+bg=green
+--
+Token get(int)
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>430</y><w>180</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;70</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>430</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>380</y><w>160</w><h>30</h></coordinates><panel_attributes>/Token/
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>450</y><w>160</w><h>30</h></coordinates><panel_attributes>/WritableToken/
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>400</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>520</y><w>160</w><h>30</h></coordinates><panel_attributes>CommonToken</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>470</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>310</y><w>220</w><h>30</h></coordinates><panel_attributes>/TokenFactory&lt;Symbol extends Token&gt;/
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>390</y><w>160</w><h>30</h></coordinates><panel_attributes>CommonTokenFactory</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>330</y><w>120</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.
+m2=&lt;CommonToken&gt;
+m2pos=-40,5</panel_attributes><additional_attributes>40;10;40;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>580</y><w>150</w><h>110</h></coordinates><panel_attributes>tree.Tree
+bg=blue
+--
+Tree getParent()
+Object getPayload()
+int getChildCount()
+Tree getChild(int i)
+String toStringTree()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>710</y><w>200</w><h>50</h></coordinates><panel_attributes>tree.SyntaxTree
+bg=blue
+--
+Interval getSourceInterval()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>680</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>790</y><w>200</w><h>50</h></coordinates><panel_attributes>tree.ParseTree
+bg=blue
+--
+Interval getSourceInterval()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>750</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>870</y><w>200</w><h>50</h></coordinates><panel_attributes>tree.RuleNode
+bg=blue
+--
+RuleContext getRuleContext()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>970</y><w>160</w><h>30</h></coordinates><panel_attributes>RuleContext</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>830</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>910</y><w>230</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>210;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>950</y><w>200</w><h>50</h></coordinates><panel_attributes>tree.TerminalNode
+bg=blue
+--
+Token getSymbol()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>910</y><w>150</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>1040</y><w>160</w><h>30</h></coordinates><panel_attributes>ParserRuleContext</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>990</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>1040</y><w>200</w><h>30</h></coordinates><panel_attributes>tree.ErrorNode
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>990</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>1020</y><w>160</w><h>30</h></coordinates><panel_attributes>TerminalNodeImpl</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>990</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;200;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>1100</y><w>160</w><h>30</h></coordinates><panel_attributes>ErrorNodeImpl</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>1060</y><w>210</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;190;40</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>1040</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>630</y><w>230</w><h>90</h></coordinates><panel_attributes>ANTLRErrorListener
+bg=blue
+--
+syntaxError(...)
+reportAmbiguity(...)
+reportAttemptingFullContext(...)
+reportContextSensitivity(...)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>620</y><w>280</w><h>140</h></coordinates><panel_attributes>ANTLRErrorStrategy
+bg=blue
+--
+void reset(Parser)
+Token recoverInline(Parser)
+void recover(Parser, RecognitionException)
+void sync(Parser)
+boolean inErrorRecoveryMode(Parser)
+void reportMatch(Parser)
+void reportError(Parser, RecognitionException)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>770</y><w>160</w><h>30</h></coordinates><panel_attributes>BaseErrorListener</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>840</y><w>160</w><h>30</h></coordinates><panel_attributes>ConsoleErrorListener</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>840</y><w>160</w><h>30</h></coordinates><panel_attributes>DiagnosticErrorListener</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1040</x><y>770</y><w>310</w><h>40</h></coordinates><panel_attributes>ProxyErrorListener
+--
+Collection&lt;? extends ANTLRErrorListener&gt; delegates</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>710</y><w>70</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>50;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>710</y><w>260</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;240;60</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>790</y><w>70</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>790</y><w>110</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1310</x><y>830</y><w>160</w><h>30</h></coordinates><panel_attributes>DefaultErrorStrategy</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1500</x><y>830</y><w>160</w><h>30</h></coordinates><panel_attributes>BailErrorStrategy</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1380</x><y>750</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>90;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1460</x><y>750</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;120;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1230</x><y>960</y><w>160</w><h>30</h></coordinates><panel_attributes>RecognitionException</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>910</y><w>190</w><h>30</h></coordinates><panel_attributes>java.lang.RuntimeException</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1270</x><y>1030</y><w>160</w><h>30</h></coordinates><panel_attributes>InputMismatchException</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1270</x><y>1060</y><w>160</w><h>30</h></coordinates><panel_attributes>LexerNoViableAltException</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1270</x><y>1090</y><w>160</w><h>30</h></coordinates><panel_attributes>NoViableAltException</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1270</x><y>1120</y><w>160</w><h>30</h></coordinates><panel_attributes>FailedPredicateException</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1210</x><y>930</y><w>40</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;20;40</additional_attributes></element><element><id>Relation</id><coordinates><x>1230</x><y>980</y><w>60</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;40;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1550</x><y>150</y><w>90</w><h>30</h></coordinates><panel_attributes>atn.ATN</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1240</x><y>280</y><w>150</w><h>30</h></coordinates><panel_attributes>atn.LexerATNSimulator</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1330</x><y>320</y><w>150</w><h>70</h></coordinates><panel_attributes>atn.ParserATNSimulator
+--
+Parser parser
+PredictionMode mode
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1480</x><y>320</y><w>80</w><h>30</h></coordinates><panel_attributes>ALL(*)
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1200</x><y>470</y><w>180</w><h>80</h></coordinates><panel_attributes>PredictionMode
+bg=orange
+--
+SLL
+LL
+LL_EXACT_AMBIG_DETECTION</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1380</x><y>200</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1300</x><y>200</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1280</x><y>380</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>630</y><w>160</w><h>30</h></coordinates><panel_attributes>UnbufferedCharStream</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>540</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>580</y><w>160</w><h>30</h></coordinates><panel_attributes>BufferedTokenStream</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>630</y><w>160</w><h>30</h></coordinates><panel_attributes>CommonTokenStream</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>680</y><w>250</w><h>30</h></coordinates><panel_attributes>UnbufferedTokenStream&lt;T extends Token&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>540</y><w>150</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>130;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>540</y><w>50</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;30;40</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>600</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element></diagram>

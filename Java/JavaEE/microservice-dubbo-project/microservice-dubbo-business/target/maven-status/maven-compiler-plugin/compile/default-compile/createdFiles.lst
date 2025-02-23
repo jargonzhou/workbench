@@ -1,0 +1,4 @@
+com\spike\microservice\dubbo\business\demo\DemoService.class
+com\spike\microservice\dubbo\business\demo\impl\DemoServiceImpl.class
+com\spike\microservice\dubbo\business\UserService.class
+com\spike\microservice\dubbo\business\impl\UserServiceImpl.class

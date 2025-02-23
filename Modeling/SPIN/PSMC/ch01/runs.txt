@@ -1,0 +1,53 @@
+# reversing_digits.pml
+
+$ spin reversing_digits.pml
+      value = 123, reversed = 321
+1 process created
+
+# var-decl.pml
+
+$ spin var-decl.pml
+      b = 7
+1 process created
+
+# symbolic-names.pml
+
+$ spin symbolic-names.pml
+      The light is now green_and_yellow
+      The light is now red
+      The light is now yellow_and_red
+      The light is now green
+...
+
+# ifs.pml
+
+$ spin ifs.pml
+      disc = 0: duplicate real roots
+1 process created
+
+# max.pml
+
+$ spin max.pml
+      The maximum of 5 and 5  = 5 by branch 1
+1 process created
+$ spin max.pml
+      The maximum of 5 and 5  = 5 by branch 2
+1 process created
+
+# dos.pml
+
+$ spin dos.pml
+      The GCD of 15 and 20 = 5
+1 process created
+
+# for-loop.pml
+
+$ spin for-loop.pml
+      The sum of the first 10 numbers = 55
+1 process created
+
+# for-loop2.pml
+
+$ spin for-loop2.pml
+      The sum of the first 10 numbers = 55
+1 process created

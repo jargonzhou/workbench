@@ -1,0 +1,67 @@
+# divide.pml
+
+$ spin divide.pml
+      15 divided by 4 = 3, remainder = 3
+1 process created
+
+# divide-error.pml
+
+$ spin divide-error.pml
+      16 divided by 4 = 3, remainder = 4
+spin: divide-error.pml:20, Error: assertion violated
+spin: text of failed assertion: assert(((0<=remainder)&&(remainder<divisor)))
+#processes: 1
+ 20:    proc  0 (P:1) divide-error.pml:20 (state 13)
+1 process created
+
+# max-error.pml
+
+$ spin -run max-error.pml
+
+pan:1: assertion violated ( ((a>=b)) ? ((max==a)) : ((max==b)) ) (at depth 0)
+pan: wrote max-error.pml.trail
+
+(Spin Version 6.5.1 -- 20 December 2019)
+Warning: Search not completed
+        + Partial Order Reduction
+
+Full statespace search for:
+        never claim             - (none specified)
+        assertion violations    +
+        cycle checks            - (disabled by -DSAFETY)
+        invalid end states      +
+
+State-vector 24 byte, depth reached 2, errors: 1
+        3 states, stored
+        0 states, matched
+        3 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.000       equivalent memory usage for states (stored*(State-vector + overhead))
+    0.292       actual memory usage for states
+  128.000       memory used for hash table (-w24)
+    0.534       memory used for DFS stack (-m10000)
+  128.730       total actual memory usage
+
+
+
+pan: elapsed time 0.04 seconds
+pan: rate        75 states/second
+
+$ spin -t -p -g -l max-error.pml
+  1:    proc  0 (P:1) max-error.pml:5 (state 3) [((b>=a))]
+  1:    proc  0 (P:1) max-error.pml:5 (state 4) [max = (b+1)]
+                P(0):max = 6
+spin: max-error.pml:7, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+  1:    proc  0 (P:1) max-error.pml:7 (state 7) [assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))]
+                P(0):max = 6
+spin: trail ends after 1 steps
+#processes: 1
+  1:    proc  0 (P:1) max-error.pml:8 (state 8) <valid end state>
+                P(0):max = 6
+                P(0):b = 5
+                P(0):a = 5
+1 process created

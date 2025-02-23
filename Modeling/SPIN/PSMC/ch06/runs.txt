@@ -1,0 +1,23 @@
+# sum.pml
+
+$ spin sum.pml
+      The sum of the numbers = 100
+1 process created
+
+# sparse-array.pml
+
+$ spin sparse-array.pml
+      0       -5       0       8
+      0       0       0       0
+      20       0       0       0
+      0       0       0       -3
+1 process created
+
+# inlines.pml
+
+$ spin inlines.pml
+spin: inlines.pml:16, Error: missing array index for 'a'        saw '')' = 41'
+spin: inlines.pml:20, Error: missing array index for 'a'        saw '')' = 41'
+      0       0       0       0       0
+      0       1       2       3       4
+1 process created

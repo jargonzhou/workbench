@@ -1,0 +1,3 @@
+init {
+	assert(false);
+}

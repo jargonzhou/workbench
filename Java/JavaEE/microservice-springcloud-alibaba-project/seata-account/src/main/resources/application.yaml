@@ -1,0 +1,45 @@
+server:
+  port: 18084
+
+spring:
+  datasource:
+    name: accountDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC
+    username: root
+    password: admin123
+    druid:
+      max-active: 20
+      min-idle: 2
+      initial-size: 2
+
+mybatis:
+  mapper-locations:
+    - classpath:mapping/*.xml
+    - classpath:mapping/autogen/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+seata:
+  enabled: true
+  application-id: seata-account
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    #disable-global-transaction: false
+    grouplist:
+      default: 127.0.0.1:8091
+  config:
+    type: file
+  #    apollo:
+  #      apollo-meta: http://192.168.1.204:8801
+  #      app-id: seata-server
+  #    type: apollo
+  registry:
+    type: file
+#    nacos:
+#      server-addr: localhost
+#      cluster: default
+#    type: nacos

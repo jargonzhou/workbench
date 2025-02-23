@@ -1,0 +1,48 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>131</x><y>119</y><w>100</w><h>50</h></coordinates><panel_attributes>halign=left
+*Client*
+--
+Operation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>491</x><y>119</y><w>100</w><h>50</h></coordinates><panel_attributes>halign=left
+/*Prototype*/
+--
+/Clone()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>361</x><y>249</y><w>140</w><h>50</h></coordinates><panel_attributes>halign=left
+*ConcretePrototype1*
+--
+Clone()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>561</x><y>249</y><w>140</w><h>50</h></coordinates><panel_attributes>halign=left
+*ConcretePrototype2*
+--
+Clone()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>131</x><y>229</y><w>140</w><h>30</h></coordinates><panel_attributes>p = prototype-&gt;Clone()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>109</y><w>290</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+m2=prototype
+m2pos=-5,-15</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>201</x><y>129</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>361</x><y>329</y><w>140</w><h>30</h></coordinates><panel_attributes>return copy of self</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>561</x><y>329</y><w>140</w><h>30</h></coordinates><panel_attributes>return copy of self</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>441</x><y>259</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>631</x><y>259</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>421</x><y>159</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;120;50;10;50;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>531</x><y>159</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;100;50;100;90</additional_attributes></element><element><id>UMLNote</id><coordinates><x>71</x><y>370</y><w>140</w><h>30</h></coordinates><panel_attributes>实例</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>31</x><y>499</y><w>100</w><h>50</h></coordinates><panel_attributes>halign=left
+*RotateTool*
+--
+Manipulation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>501</x><y>449</y><w>100</w><h>60</h></coordinates><panel_attributes>halign=left
+/*Graphic*/
+--
+/Draw(Position)/
+/Clone()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>371</x><y>549</y><w>140</w><h>60</h></coordinates><panel_attributes>halign=left
+*Staff*
+--
+Draw(Position)
+Clone()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>611</x><y>549</y><w>140</w><h>20</h></coordinates><panel_attributes>halign=left
+*MusicalNote*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>531</x><y>619</y><w>140</w><h>60</h></coordinates><panel_attributes>halign=left
+*WholeNote*
+--
+Draw(Position)
+Clone()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>701</x><y>619</y><w>140</w><h>60</h></coordinates><panel_attributes>halign=left
+*HalfNote*
+--
+Draw(Position)
+Clone()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>121</x><y>409</y><w>100</w><h>50</h></coordinates><panel_attributes>halign=left
+/*Tool*/
+--
+Manipulation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>201</x><y>499</y><w>100</w><h>50</h></coordinates><panel_attributes>halign=left
+*GraphicTool*
+--
+Manipulation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>71</x><y>450</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;40;10;40;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>450</y><w>110</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;90;40;90;50</additional_attributes></element><element><id>Relation</id><coordinates><x>431</x><y>500</y><w>140</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;120;40;10;40;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>541</x><y>500</y><w>160</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;140;40;140;50</additional_attributes></element><element><id>Relation</id><coordinates><x>591</x><y>560</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;90;50;10;50;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>671</x><y>560</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;90;50;90;60</additional_attributes></element><element><id>UMLNote</id><coordinates><x>531</x><y>699</y><w>140</w><h>30</h></coordinates><panel_attributes>return copy of self</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>701</x><y>699</y><w>140</w><h>30</h></coordinates><panel_attributes>return copy of self</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>611</x><y>639</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>781</x><y>639</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>291</x><y>449</y><w>230</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m2=prototype
+m2pos=5,-15</panel_attributes><additional_attributes>210;10;100;10;100;60;10;60</additional_attributes></element><element><id>UMLNote</id><coordinates><x>171</x><y>609</y><w>170</w><h>100</h></coordinates><panel_attributes>p = prototype-&gt;Clone()
+
+while (user drags mouse) {
+    p-&gt;Draw(new position)
+}
+inert p into drawing</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>281</x><y>509</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=.o</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>

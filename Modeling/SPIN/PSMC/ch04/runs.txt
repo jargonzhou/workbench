@@ -1,0 +1,156 @@
+# busy-waiting.pml
+
+$ spin busy-waiting.pml
+      Noncritical section P
+          Noncritical section Q
+      Critical section P
+      Noncritical section P
+^C
+
+$ spin busy-waiting.pml
+      Noncritical section P
+          Noncritical section Q
+      Critical section P
+          Critical section Q
+          Noncritical section Q
+      Noncritical section P
+          Critical section Q
+          Noncritical section Q
+^C
+
+# deadlock.pml
+
+$ spin deadlock.pml
+      Noncritical section P
+          Noncritical section Q
+      timeout
+#processes: 2
+                wantP = 1
+                wantQ = 1
+  4:    proc  1 (Q:1) deadlock.pml:17 (state 3)
+  4:    proc  0 (P:1) deadlock.pml:7 (state 3)
+2 processes created
+
+$ spin deadlock.pml
+          Noncritical section Q
+      Noncritical section P
+      Critical section P
+      Noncritical section P
+          Critical section Q
+          Noncritical section Q
+      Critical section P
+          Critical section Q
+          Noncritical section Q
+      Noncritical section P
+      Critical section P
+          Critical section Q
+          Noncritical section Q
+      Noncritical section P
+      timeout
+#processes: 2
+                wantP = 1
+                wantQ = 1
+ 40:    proc  1 (Q:1) deadlock.pml:17 (state 3)
+ 40:    proc  0 (P:1) deadlock.pml:7 (state 3)
+2 processes created
+
+# atomics.pml
+
+$ spin atomics.pml
+      Noncritical section P
+          Noncritical section Q
+      Critical section P
+          Critical section Q
+          Noncritical section Q
+      Noncritical section P
+          Critical section Q
+          Noncritical section Q
+      Critical section P
+
+# relay.pml
+
+$ spin relay.pml
+              Output = 1
+              Output = 2
+              Output = 3
+              Output = 6
+      timeout
+#processes: 3
+                input = 0
+                output = 0
+120:    proc  2 (Destination:1) relay.pml:26 (state 4)
+120:    proc  1 (Relay:1) relay.pml:12 (state 9)
+120:    proc  0 (Source:1) relay.pml:9 (state 11) <valid end state>
+3 processes created
+
+$ spin relay.pml
+              Output = 2
+              Output = 3
+              Output = 5
+              Output = 7
+              Output = 8
+              Output = 9
+              Output = 10
+      timeout
+#processes: 3
+                input = 0
+                output = 0
+132:    proc  2 (Destination:1) relay.pml:26 (state 4)
+132:    proc  1 (Relay:1) relay.pml:12 (state 9)
+132:    proc  0 (Source:1) relay.pml:9 (state 11) <valid end state>
+3 processes created
+
+# cs-sem.pml
+
+$ spin cs-sem.pml
+          Noncritical section Q
+          Critical section Q
+      Noncritical section P
+      Critical section P
+      Noncritical section P
+          Noncritical section Q
+      Critical section P
+      Noncritical section P
+          Critical section Q
+          Noncritical section Q
+      Critical section P
+          Critical section Q
+      Noncritical section P
+          Noncritical section Q
+      Critical section P
+          Critical section Q
+...
+
+# client-server.pml
+
+$ spin client-server.pml
+      Service 1
+          Service 2
+      timeout
+#processes: 2
+                request = 0
+ 12:    proc  1 (Server2:1) client-server.pml:14 (state 4) <valid end state>
+ 12:    proc  0 (Server1:1) client-server.pml:5 (state 4) <valid end state>
+3 processes created
+
+# client-server-termination.pml
+
+$ spin -p client-server-termination.pml
+  0:    proc  - (:root:) creates proc  0 (Server1)
+  0:    proc  - (:root:) creates proc  1 (Server2)
+  0:    proc  - (:root:) creates proc  2 (Client)
+  1:    proc  2 (Client:1) client-server-termination.pml:17 (state 1)   [request = 1]
+  2:    proc  0 (Server1:1) client-server-termination.pml:5 (state 1)   [((request==1))]
+  3:    proc  0 (Server1:1) client-server-termination.pml:6 (state 2)   [request = 0]
+  4:    proc  0 (Server1:1) client-server-termination.pml:7 (state 3)   [finished = (finished+1)]
+  5:    proc  2 (Client:1) client-server-termination.pml:18 (state 2)   [((request==0))]
+  6:    proc  2 (Client:1) client-server-termination.pml:19 (state 3)   [request = 2]
+  7:    proc  1 (Server2:1) client-server-termination.pml:11 (state 1)  [((request==2))]
+  8:    proc  1 (Server2:1) client-server-termination.pml:12 (state 2)  [request = 0]
+  9:    proc  2 (Client:1) client-server-termination.pml:20 (state 4)   [((request==0))]
+ 10:    proc  1 (Server2:1) client-server-termination.pml:13 (state 3)  [finished = (finished+1)]
+ 11:    proc  2 (Client:1) client-server-termination.pml:21 (state 5)   [((finished==2))]
+ 11:    proc  2 (Client:1)               terminates
+ 11:    proc  1 (Server2:1)           terminates
+ 11:    proc  0 (Server1:1)       terminates
+3 processes created

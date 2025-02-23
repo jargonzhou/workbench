@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: nacosconfig
+  #  profiles:
+  #    active: dev
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        contextPath: /nacos
+        namespace: public
+        username: nacos
+        password: nacos
+        file-extension: yaml
+        shared-configs[0]:
+          data-id: nacos-config-example.yaml
+          refresh: true
+      #        shared-configs[1]:
+      #          data-id: shared1
+      #          refresh: true
+      #        extension-configs:
+      #          - data-id: extension0
+      #            refresh: true
+      #          - data-id: extension1
+      #            refresh: true
+#  config:
+#    import: nacos:nacos-config-example.properties?refresh=true

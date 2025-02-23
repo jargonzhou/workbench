@@ -1,0 +1,17 @@
+
+services:
+  # https://hub.docker.com/r/almondsh/almond
+  almond:
+    # image: almondsh/almond
+    image: almondsh/examples
+    container_name: almond
+    restart: always
+    privileged: true
+    ports: # DEPLOY_ENV
+      - 8888:8888
+    networks:
+      - devops-network
+
+networks:
+  devops-network:
+    external: true

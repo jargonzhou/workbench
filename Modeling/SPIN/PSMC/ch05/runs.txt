@@ -1,0 +1,104 @@
+# safety.pml
+
+$ spin -F safety.prp -run -safety safety.pml
+
+$ spin -a -F safety.prp safety.pml
+$ gcc -DSAFETY -o pan pan.c
+$ ./pan -d
+proctype P
+        state   6 -(tr  11)-> state   2  [id   0 tp   2] [----G] safety.pml:7 => wantP = 1
+        state   2 -(tr  12)-> state   3  [id   1 tp   2] [----G] safety.pml:8 => (!(wantQ))
+        state   3 -(tr  13)-> state   4  [id   2 tp   2] [----G] safety.pml:9 => critical = (critical+1)
+        state   4 -(tr  14)-> state   5  [id   3 tp   2] [----G] safety.pml:10 => critical = (critical-1)
+        state   5 -(tr  15)-> state   6  [id   4 tp   2] [----G] safety.pml:11 => wantP = 0
+proctype Q
+        state   6 -(tr   5)-> state   2  [id   9 tp   2] [----G] safety.pml:17 => wantQ = 1
+        state   2 -(tr   6)-> state   3  [id  10 tp   2] [----G] safety.pml:18 => (!(wantP))
+        state   3 -(tr   7)-> state   4  [id  11 tp   2] [----G] safety.pml:19 => critical = (critical+1)
+        state   4 -(tr   8)-> state   5  [id  12 tp   2] [----G] safety.pml:20 => critical = (critical-1)
+        state   5 -(tr   9)-> state   6  [id  13 tp   2] [----G] safety.pml:21 => wantQ = 0
+claim never_0
+        state   6 -(tr   3)-> state   6  [id  18 tp   2] [----G] safety.pml:5 => (!((critical<=1)))
+        state   6 -(tr   1)-> state   6  [id  21 tp   2] [----G] safety.pml:5 => (1)
+
+Transition Type: A=atomic; D=d_step; L=local; G=global
+Source-State Labels: p=progress; e=end; a=accept;
+Note: statement merging was used. Only the first
+      stmnt executed in each merge sequence is shown
+      (use spin -a -o3 to disable statement merging)
+
+pan: elapsed time 1.65e+04 seconds
+pan: rate         0 states/second
+
+# liveness.pml
+
+$ spin -F liveness.prp -run -f liveness.pml
+pan:1: acceptance cycle (at depth 14)
+pan: wrote liveness.pml.trail
+
+$ ./pan -a -f -d
+proctype P
+        state  13 -(tr  11)-> state   7  [id   0 tp   2] [----G] liveness.pml:6 => wantP = 1
+        state   7 -(tr  12)-> state   3  [id   1 tp   2] [----G] liveness.pml:8 => (wantQ)
+        state   7 -(tr   2)-> state  10  [id   4 tp   2] [----G] liveness.pml:8 => else
+        state   3 -(tr  13)-> state   4  [id   2 tp   2] [----G] liveness.pml:9 => wantP = 0
+        state   4 -(tr  14)-> state   7  [id   3 tp   2] [----G] liveness.pml:10 => wantP = 1
+        state  10 -(tr  15)-> state  11  [id   9 tp   2] [----G] liveness.pml:13 => csp = 1
+        state  11 -(tr  16)-> state  12  [id  10 tp   2] [----G] liveness.pml:14 => csp = 0
+        state  12 -(tr  17)-> state  13  [id  11 tp   2] [----G] liveness.pml:15 => wantP = 0
+proctype Q
+        state  11 -(tr   5)-> state   7  [id  16 tp   2] [----G] liveness.pml:21 => wantQ = 1
+        state   7 -(tr   6)-> state   3  [id  17 tp   2] [----G] liveness.pml:23 => (wantP)
+        state   7 -(tr   2)-> state  10  [id  20 tp   2] [----G] liveness.pml:23 => else
+        state   3 -(tr   7)-> state   4  [id  18 tp   2] [----G] liveness.pml:24 => wantQ = 0
+        state   4 -(tr   8)-> state   7  [id  19 tp   2] [----G] liveness.pml:25 => wantQ = 1
+        state  10 -(tr   9)-> state  11  [id  25 tp   2] [----G] liveness.pml:28 => wantQ = 0
+claim never_0
+        state   3 -(tr   3)-> state   3  [id  30 tp   2] [-a--G] liveness.pml:6 => (!(csp))
+
+Transition Type: A=atomic; D=d_step; L=local; G=global
+Source-State Labels: p=progress; e=end; a=accept;
+Note: statement merging was used. Only the first
+      stmnt executed in each merge sequence is shown
+      (use spin -a -o3 to disable statement merging)
+
+pan: elapsed time 2.09e+04 seconds
+pan: rate         0 states/second
+
+# peterson.pml
+
+$ spin -F peterson.prp -run -f peterson.pml
+$ ./pan -a -f -d
+proctype P
+        state   5 -(tr  21)-> state   2  [id   0 tp   2] [----G] peterson.pml:10 => wantP = 1
+        state   2 -(tr  22)-> state   3  [id   1 tp   2] [----G] peterson.pml:11 => last = 1
+        state   3 -(tr  23)-> state   4  [id   2 tp   2] [----G] peterson.pml:12 => (((wantQ==0)||(last==2)))
+        state   4 -(tr  24)-> state   5  [id   3 tp   2] [----G] peterson.pml:13 => wantP = 0
+proctype Q
+        state   5 -(tr  16)-> state   2  [id   8 tp   2] [----G] peterson.pml:19 => wantQ = 1
+        state   2 -(tr  17)-> state   3  [id   9 tp   2] [----G] peterson.pml:20 => last = 2
+        state   3 -(tr  18)-> state   4  [id  10 tp   2] [----G] peterson.pml:21 => (((wantP==0)||(last==1)))
+        state   4 -(tr  19)-> state   5  [id  11 tp   2] [----G] peterson.pml:22 => wantQ = 0
+claim never_0
+        state   7 -(tr   3)-> state  14  [id  16 tp   2] [----G] peterson.pml:5 => ((!((P._p==cs))&&(P._p==try)))
+        state   7 -(tr   4)-> state  21  [id  18 tp   2] [----G] peterson.pml:5 => (((!((P._p==cs))&&(P._p==try))&&(Q._p==cs)))
+        state   7 -(tr   1)-> state   7  [id  20 tp   2] [----G] peterson.pml:5 => (1)
+        state  14 -(tr   5)-> state  36  [id  25 tp   2] [-a--G] peterson.pml:11 => (!((P._p==cs)))
+        state  14 -(tr   6)-> state  43  [id  27 tp   2] [-a--G] peterson.pml:11 => ((!((P._p==cs))&&(Q._p==cs)))
+        state  36 -(tr  11)-> state  14  [id  47 tp   2] [----G] peterson.pml:26 => (!((P._p==cs)))
+        state  36 -(tr  12)-> state  21  [id  49 tp   2] [----G] peterson.pml:26 => ((!((P._p==cs))&&(Q._p==cs)))
+        state  21 -(tr   7)-> state  43  [id  32 tp   2] [-a--G] peterson.pml:16 => (!((P._p==cs)))
+        state  21 -(tr   8)-> state  29  [id  34 tp   2] [-a--G] peterson.pml:16 => ((!((P._p==cs))&&!((Q._p==cs))))
+        state  43 -(tr  13)-> state  21  [id  54 tp   2] [----G] peterson.pml:31 => (!((P._p==cs)))
+        state  43 -(tr  14)-> state  29  [id  56 tp   2] [----G] peterson.pml:31 => ((!((P._p==cs))&&!((Q._p==cs))))
+        state  29 -(tr   9)-> state  29  [id  39 tp   2] [-a--G] peterson.pml:21 => (!((P._p==cs)))
+        state  29 -(tr  10)-> state  29  [id  41 tp   2] [-a--G] peterson.pml:21 => ((!((P._p==cs))&&(Q._p==cs)))
+
+Transition Type: A=atomic; D=d_step; L=local; G=global
+Source-State Labels: p=progress; e=end; a=accept;
+Note: statement merging was used. Only the first
+      stmnt executed in each merge sequence is shown
+      (use spin -a -o3 to disable statement merging)
+
+pan: elapsed time 2.11e+04 seconds
+pan: rate         0 states/second

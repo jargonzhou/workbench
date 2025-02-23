@@ -1,0 +1,4 @@
+com\spike\microservice\dubbo\storage\config\MySQLConfiguration.class
+com\spike\microservice\dubbo\storage\support\Page.class
+com\spike\microservice\dubbo\storage\support\Pageable.class
+com\spike\microservice\dubbo\storage\dao\UsersMapper.class

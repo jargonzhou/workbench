@@ -1,0 +1,136 @@
+# interleaving.pml
+
+$ spin -p -g interleaving.pml
+  0:    proc  - (:root:) creates proc  0 (P)
+  0:    proc  - (:root:) creates proc  1 (Q)
+  1:    proc  0 (P:1) interleaving.pml:4 (state 1)      [n = 1]
+                n = 1
+  2:    proc  1 (Q:1) interleaving.pml:9 (state 1)      [n = 2]
+                n = 2
+      Process P, n = 2
+  3:    proc  0 (P:1) interleaving.pml:5 (state 2)      [printf('Process P, n = %d\\n',n)]
+          Process Q, n = 2
+  4:    proc  1 (Q:1) interleaving.pml:10 (state 2)     [printf('Process Q, n = %d\\n',n)]
+  4:    proc  1 (Q:1)           terminates
+  4:    proc  0 (P:1)       terminates
+2 processes created
+
+# interference.pml
+
+$ spin -p -g interference.pml
+  0:    proc  - (:root:) creates proc  0 (P)
+  0:    proc  - (:root:) creates proc  1 (Q)
+  1:    proc  1 (Q:1) interference.pml:12 (state 1)     [temp = (n+1)]
+  2:    proc  0 (P:1) interference.pml:5 (state 1)      [temp = (n+1)]
+  3:    proc  1 (Q:1) interference.pml:13 (state 2)     [n = temp]
+                n = 1
+          Process Q, n = 1
+  4:    proc  1 (Q:1) interference.pml:14 (state 3)     [printf('Process Q, n = %d\\n',n)]
+  5:    proc  0 (P:1) interference.pml:6 (state 2)      [n = temp]
+  5:    proc  1 (Q:1)           terminates
+      Process P, n = 1
+  6:    proc  0 (P:1) interference.pml:7 (state 3)      [printf('Process P, n = %d\\n',n)]
+  6:    proc  0 (P:1)       terminates
+2 processes created
+
+# processes.pml
+
+$ spin processes.pml
+      Process P0, n = 2
+          Process P1, n = 2
+2 processes created
+
+$ spin processes.pml
+      Process P0, n = 1
+          Process P1, n = 1
+2 processes created
+
+# run-init.pml
+
+$ spin run-init.pml
+              Process P2, n = 15
+          Process P1, n = 15
+3 processes created
+
+$ spin run-init.pml
+              Process P2, n = 10
+          Process P1, n = 10
+3 processes created
+
+# interference2.pml
+
+$ spin interference2.pml
+      The value is 16
+3 processes created
+
+$ spin interference2.pml
+      The value is 18
+3 processes created
+
+# d_steps.pml
+
+$ spin d_steps.pml
+      Process P, n = 2
+          Process Q, n = 2
+2 processes created
+
+# cs.pml
+
+$ spin -run cs.pml
+pan:1: assertion violated (critical<=1) (at depth 22)
+pan: wrote cs.pml.trail
+
+$ spin -t -p -g cs.pml
+          Noncritical section Q
+  1:    proc  1 (Q:1) cs.pml:18 (state 1)       [printf('Noncritical section Q\\n')]
+      Noncritical section P
+  2:    proc  0 (P:1) cs.pml:6 (state 1)        [printf('Noncritical section P\\n')]
+  3:    proc  1 (Q:1) cs.pml:19 (state 2)       [wantQ = 1]
+                wantQ = 1
+  4:    proc  1 (Q:1) cs.pml:20 (state 3)       [critical = (critical+1)]
+                critical = 1
+          Critical section Q
+  5:    proc  1 (Q:1) cs.pml:21 (state 4)       [printf('Critical section Q\\n')]
+  6:    proc  1 (Q:1) cs.pml:22 (state 5)       [assert((critical<=1))]
+  7:    proc  1 (Q:1) cs.pml:23 (state 6)       [critical = (critical-1)]
+                critical = 0
+  8:    proc  1 (Q:1) cs.pml:24 (state 7)       [wantQ = 0]
+                wantQ = 0
+  9:    proc  0 (P:1) cs.pml:7 (state 2)        [wantP = 1]
+                wantP = 1
+          Noncritical section Q
+ 10:    proc  1 (Q:1) cs.pml:18 (state 1)       [printf('Noncritical section Q\\n')]
+ 11:    proc  1 (Q:1) cs.pml:19 (state 2)       [wantQ = 1]
+                wantQ = 1
+ 12:    proc  1 (Q:1) cs.pml:20 (state 3)       [critical = (critical+1)]
+                critical = 1
+          Critical section Q
+ 13:    proc  1 (Q:1) cs.pml:21 (state 4)       [printf('Critical section Q\\n')]
+ 14:    proc  1 (Q:1) cs.pml:22 (state 5)       [assert((critical<=1))]
+ 15:    proc  1 (Q:1) cs.pml:23 (state 6)       [critical = (critical-1)]
+                critical = 0
+ 16:    proc  0 (P:1) cs.pml:8 (state 3)        [critical = (critical+1)]
+                critical = 1
+      Critical section P
+ 17:    proc  0 (P:1) cs.pml:9 (state 4)        [printf('Critical section P\\n')]
+ 18:    proc  1 (Q:1) cs.pml:24 (state 7)       [wantQ = 0]
+                wantQ = 0
+          Noncritical section Q
+ 19:    proc  1 (Q:1) cs.pml:18 (state 1)       [printf('Noncritical section Q\\n')]
+ 20:    proc  1 (Q:1) cs.pml:19 (state 2)       [wantQ = 1]
+                wantQ = 1
+ 21:    proc  1 (Q:1) cs.pml:20 (state 3)       [critical = (critical+1)]
+                critical = 2
+          Critical section Q
+ 22:    proc  1 (Q:1) cs.pml:21 (state 4)       [printf('Critical section Q\\n')]
+spin: cs.pml:22, Error: assertion violated
+spin: text of failed assertion: assert((critical<=1))
+ 23:    proc  1 (Q:1) cs.pml:22 (state 5)       [assert((critical<=1))]
+spin: trail ends after 23 steps
+#processes: 2
+                wantP = 1
+                wantQ = 1
+                critical = 2
+ 23:    proc  1 (Q:1) cs.pml:23 (state 6)
+ 23:    proc  0 (P:1) cs.pml:10 (state 5)
+2 processes created

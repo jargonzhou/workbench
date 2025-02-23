@@ -1,0 +1,46 @@
+debug: true
+
+logging:
+  level: 
+    com.spike.microservice.commons.data.mybatis.dao.mapper: debug
+
+spring:
+  application:
+    name: microservice-commons-data-mybatis
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/microservice?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false&allowMultiQueries=true
+      username: root
+      password: admin
+      driver-class-name: com.mysql.jdbc.Driver
+      initialSize: 5
+      minIdle: 5
+      maxActive: 10
+      maxWait: 10000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      keepAlive: true
+      removeAbandoned: true
+      removeAbandonedTimeout: 80
+      logAbandoned: true
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,slf4j,wall
+      
+mybatis:
+  type-aliases-package: com.spike.microservice.commons.data.mybatis.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+        map-underscore-to-camel-case: true
+        default-fetch-size: 100
+        default-statement-timeout: 30
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql        
+        

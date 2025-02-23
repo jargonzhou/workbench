@@ -1,0 +1,16 @@
+server.port: 8888
+
+spike.workers:
+  configs:
+    hello-world:
+      name: HelloWorld
+      type: com.spike.springframework.example.context.worker.impl.HelloWorldWorker
+      enabled: true
+      params:
+        greeting: Spike
+    work-horse:
+      name: WorkHorse
+      # no type
+      enabled: true
+      params:
+        duration: 1

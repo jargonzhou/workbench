@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.el": "commonlisp",
+    "*.rs": "rust",
+    "*.c": "c",
+    "cstdlib": "c",
+    "stdlib.h": "c"
+  }
+}
