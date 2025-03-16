@@ -1,0 +1,577 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLNote</id><coordinates><x>40</x><y>0</y><w>320</w><h>30</h></coordinates><panel_attributes>net/http
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>60</y><w>100</w><h>80</h></coordinates><panel_attributes>interface
+--
+Method1
+Method2
+--
+related func
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>160</y><w>100</w><h>70</h></coordinates><panel_attributes>type
+--
+uderlying type
+--
+Method1
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>60</y><w>100</w><h>90</h></coordinates><panel_attributes>struct
+--
+Field1
+Field2
+--
+Method1
+Method2
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>310</y><w>510</w><h>420</h></coordinates><panel_attributes>http
+--
+CanonicalHeaderKey(s string) string
+--
+DetectContentType(data []byte) string
+--
+Error(w ResponseWriter, error string, code int)
+--
+Handle(pattern string, handler Handler)
+--
+HandleFunc(pattern string, handler func(ResponseWriter, *Request))
+--
+ListenAndServe(addr string, handler Handler) error
+--
+ListenAndServeTLS(addr, certFile, keyFile string, handler Handler) error
+--
+MaxBytesReader(w ResponseWriter, r io.ReadCloser, n int64) io.ReadCloser
+--
+NotFound(w ResponseWriter, r *Request)
+--
+ParseHTTPVersion(vers string) (major, minor int, ok bool)
+--
+ParseTime(text string) (t time.Time, err error)
+--
+ProxyFromEnvironment(req *Request) (*url.URL, error)
+--
+ProxyURL(fixedURL *url.URL) func(*Request) (*url.URL, error)
+--
+Redirect(w ResponseWriter, r *Request, url string, code int)
+--
+Serve(l net.Listener, handler Handler) error
+--
+ServeContent(w ResponseWriter, req *Request, name string, modtime time.Time, ...)
+--
+ServeFile(w ResponseWriter, r *Request, name string)
+--
+ServeTLS(l net.Listener, handler Handler, certFile, keyFile string) error
+--
+SetCookie(w ResponseWriter, cookie *Cookie)
+--
+StatusText(code int) string
+
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>10</y><w>400</w><h>370</h></coordinates><panel_attributes>Server
+--
+Addr string
+Handler Handler
+DisableGeneralOptionsHandler bool
+TLSConfig *tls.Config
+ReadTimeout time.Duration
+ReadHeaderTimeout time.Duration
+WriteTimeout time.Duration
+IdleTimeout time.Duration
+MaxHeaderBytes int
+TLSNextProto map[string]func(*Server, *tls.Conn, Handler)
+ConnState func(net.Conn, ConnState)
+ErrorLog *log.Logger
+BaseContext func(net.Listener) context.Context
+ConnContext func(ctx context.Context, c net.Conn) context.Context
+--
+(srv *Server) Close() error
+(srv *Server) ListenAndServe() error
+(srv *Server) ListenAndServeTLS(certFile, keyFile string) error
+(srv *Server) RegisterOnShutdown(f func())
+(srv *Server) Serve(l net.Listener) error
+(srv *Server) ServeTLS(l net.Listener, certFile, keyFile string) error
+(srv *Server) SetKeepAlivesEnabled(v bool)
+(srv *Server) Shutdown(ctx context.Context) error
+
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>820</y><w>190</w><h>200</h></coordinates><panel_attributes>http
+--
+MethodGet     = "GET"
+--
+MethodHead    = "HEAD"
+--
+MethodPost    = "POST"
+--
+MethodPut     = "PUT"
+--
+MethodPatch   = "PATCH"
+--
+MethodDelete  = "DELETE"
+--
+MethodConnect = "CONNECT"
+--
+MethodOptions = "OPTIONS"
+--
+MethodTrace   = "TRACE"
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>180</y><w>80</w><h>30</h></coordinates><panel_attributes>Variable</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>1170</y><w>270</w><h>240</h></coordinates><panel_attributes>http
+--
+StatusInternalServerError           = 500
+--
+StatusNotImplemented                = 501
+--
+StatusBadGateway                    = 502
+--
+StatusServiceUnavailable            = 503
+--
+StatusGatewayTimeout                = 504
+--
+StatusHTTPVersionNotSupported       = 505
+--
+StatusVariantAlsoNegotiates         = 506
+--
+StatusInsufficientStorage           = 507
+--
+StatusLoopDetected                  = 508
+--
+StatusNotExtended                   = 510
+--
+StatusNetworkAuthenticationRequired = 511
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1170</y><w>270</w><h>100</h></coordinates><panel_attributes>http
+--
+StatusContinue           = 100
+--
+StatusSwitchingProtocols = 101
+--
+StatusProcessing         = 102
+--
+StatusEarlyHints         = 103
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1490</y><w>270</w><h>180</h></coordinates><panel_attributes>http
+--
+StatusMultipleChoices  = 300
+--
+StatusMovedPermanently = 301
+--
+StatusFound            = 302
+--
+StatusSeeOther         = 303
+--
+StatusNotModified      = 304
+--
+StatusUseProxy         = 305
+--
+StatusTemporaryRedirect = 307
+--
+StatusPermanentRedirect = 308
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1270</y><w>270</w><h>220</h></coordinates><panel_attributes>http
+--
+StatusOK                   = 200
+--
+StatusCreated              = 201
+--
+StatusAccepted             = 202
+--
+StatusNonAuthoritativeInfo = 203
+--
+StatusNoContent            = 204
+--
+StatusResetContent         = 205
+--
+StatusPartialContent       = 206
+--
+StatusMultiStatus          = 207
+--
+StatusAlreadyReported      = 208
+--
+StatusIMUsed               = 226
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>1170</y><w>270</w><h>600</h></coordinates><panel_attributes>http
+--
+StatusBadRequest                   = 400
+--
+StatusUnauthorized                 = 401
+--
+StatusPaymentRequired              = 402
+--
+StatusForbidden                    = 403
+--
+StatusNotFound                     = 404
+--
+StatusMethodNotAllowed             = 405
+--
+StatusNotAcceptable                = 406
+--
+StatusProxyAuthRequired            = 407
+--
+StatusRequestTimeout               = 408
+--
+StatusConflict                     = 409
+--
+StatusGone                         = 410
+--
+StatusLengthRequired               = 411
+--
+StatusPreconditionFailed           = 412
+--
+StatusRequestEntityTooLarge        = 413
+--
+StatusRequestURITooLong            = 414
+--
+StatusUnsupportedMediaType         = 415
+--
+StatusRequestedRangeNotSatisfiable = 416
+--
+StatusExpectationFailed            = 417
+--
+StatusTeapot                       = 418
+--
+StatusMisdirectedRequest           = 421
+--
+StatusUnprocessableEntity          = 422
+--
+StatusLocked                       = 423
+--
+StatusFailedDependency             = 424
+--
+StatusTooEarly                     = 425
+--
+StatusUpgradeRequired              = 426
+--
+StatusPreconditionRequired         = 428
+--
+StatusTooManyRequests              = 429
+--
+StatusRequestHeaderFieldsTooLarge  = 431
+--
+StatusUnavailableForLegalReasons   = 451
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>820</y><w>290</w><h>100</h></coordinates><panel_attributes>http
+--
+DefaultMaxHeaderBytes = 1 &lt;&lt; 20 // 1 MB
+--
+DefaultMaxIdleConnsPerHost = 2
+--
+TimeFormat = "Mon, 02 Jan 2006 15:04:05 GMT"
+--
+TrailerPrefix = "Trailer:"
+
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1840</y><w>620</w><h>490</h></coordinates><panel_attributes>http
+--
+ErrNotSupported = &amp;ProtocolError{"feature not supported"}
+ErrUnexpectedTrailer = &amp;ProtocolError{"trailer header without chunked transfer encoding"}
+ErrMissingBoundary = &amp;ProtocolError{"no multipart boundary param in Content-Type"}
+ErrNotMultipart = &amp;ProtocolError{"request Content-Type isn't multipart/form-data"}
+ErrHeaderTooLong = &amp;ProtocolError{"header too long"}
+ErrShortBody = &amp;ProtocolError{"entity body too short"}
+ErrMissingContentLength = &amp;ProtocolError{"missing ContentLength in HEAD response"}
+--
+ErrBodyNotAllowed = errors.New("http: request method or response status code does not allow body")
+ErrHijacked = errors.New("http: connection has been hijacked")
+ErrContentLength = errors.New("http: wrote more than the declared Content-Length")
+ErrWriteAfterFlush = errors.New("unused")
+--
+ServerContextKey = &amp;contextKey{"http-server"}
+LocalAddrContextKey = &amp;contextKey{"local-addr"}
+--
+DefaultClient = &amp;Client{}
+--
+DefaultServeMux = &amp;defaultServeMux
+--
+ErrAbortHandler = errors.New("net/http: abort Handler")
+--
+ErrBodyReadAfterClose = errors.New("http: invalid Read on closed Body")
+--
+ErrHandlerTimeout = errors.New("http: Handler timeout")
+--
+ErrLineTooLong = internal.ErrLineTooLong
+--
+ErrMissingFile = errors.New("http: no such file")
+--
+ErrNoCookie = errors.New("http: named cookie not present")
+--
+ErrNoLocation = errors.New("http: no Location header in response")
+--
+ErrServerClosed = errors.New("http: Server closed")
+--
+ErrSkipAltProtocol = errors.New("net/http: skip alternate protocol")
+--
+ErrUseLastResponse = errors.New("net/http: use last response")
+--
+DefaultTransport RoundTripper = &amp;Transport{}
+NoBody = noBody{}
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1460</x><y>10</y><w>490</w><h>180</h></coordinates><panel_attributes>Client
+--
+Transport RoundTripper
+CheckRedirect func(req *Request, via []*Request) error
+Jar CookieJar
+Timeout time.Duration
+--
+(c *Client) CloseIdleConnections()
+(c *Client) Do(req *Request) (*Response, error)
+(c *Client) Get(url string) (resp *Response, err error)
+(c *Client) Head(url string) (resp *Response, err error)
+(c *Client) Post(url, contentType string, body io.Reader) (resp *Response, err error)
+(c *Client) PostForm(url string, data url.Values) (resp *Response, err error)
+
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1350</x><y>920</y><w>180</w><h>50</h></coordinates><panel_attributes>~CloseNotifier~
+--
+CloseNotify() &lt;-chan bool
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>1470</y><w>170</w><h>240</h></coordinates><panel_attributes>Cookie
+--
+Name  string
+Value string
+Path       string   
+Domain     string   
+Expires    time.Time
+RawExpires string   
+MaxAge   int
+Secure   bool
+HttpOnly bool
+SameSite SameSite
+Raw      string
+Unparsed []string
+--
+(c *Cookie) String() string
+(c *Cookie) Valid() error
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>1470</y><w>260</w><h>60</h></coordinates><panel_attributes>CookieJar
+--
+SetCookies(u *url.URL, cookies []*Cookie)
+Cookies(u *url.URL) []*Cookie
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1110</x><y>1130</y><w>220</w><h>110</h></coordinates><panel_attributes>File
+--
+io.Closer
+io.Reader
+io.Seeker
+--
+Readdir(count int) ([]fs.FileInfo, error)
+Stat() (fs.FileInfo, error)
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1350</x><y>1130</y><w>210</w><h>60</h></coordinates><panel_attributes>FileSystem
+--
+Open(name string) (File, error)
+--
+FS(fsys fs.FS) FileSystem
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1420</x><y>1470</y><w>100</w><h>50</h></coordinates><panel_attributes>Flusher
+--
+Flush()
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1570</x><y>1690</y><w>390</w><h>150</h></coordinates><panel_attributes>Handler
+--
+ServeHTTP(ResponseWriter, *Request)
+--
+AllowQuerySemicolons(h Handler) Handler
+FileServer(root FileSystem) Handler
+MaxBytesHandler(h Handler, n int64) Handler
+NotFoundHandler() Handler
+RedirectHandler(url string, code int) Handler
+StripPrefix(prefix string, h Handler) Handler
+TimeoutHandler(h Handler, dt time.Duration, msg string) Handler
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1570</x><y>1860</y><w>350</w><h>60</h></coordinates><panel_attributes>HandlerFunc
+--
+func(ResponseWriter, *Request)
+--
+(f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request)
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>1260</y><w>390</w><h>170</h></coordinates><panel_attributes>Header
+--
+map[string][]string
+--
+(h Header) Add(key, value string)
+(h Header) Clone() Header
+(h Header) Del(key string)
+(h Header) Get(key string) string
+(h Header) Set(key, value string)
+(h Header) Values(key string) []string
+(h Header) Write(w io.Writer) error
+(h Header) WriteSubset(w io.Writer, exclude map[string]bool) error
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>1670</y><w>270</w><h>40</h></coordinates><panel_attributes>Hijacker
+--
+Hijack() (net.Conn, *bufio.ReadWriter, error)
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>1570</y><w>210</w><h>70</h></coordinates><panel_attributes>MaxBytesError
+--
+Limit int64
+--
+(e *MaxBytesError) Error() string
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1110</x><y>1010</y><w>200</w><h>80</h></coordinates><panel_attributes>~ProtocolError~
+--
+Field1
+Field2
+--
+(pe *ProtocolError) Error() string
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1590</x><y>1470</y><w>100</w><h>60</h></coordinates><panel_attributes>PushOptions
+--
+Method string
+Header Header
+
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1420</x><y>1570</y><w>270</w><h>50</h></coordinates><panel_attributes>Pusher
+--
+Push(target string, opts *PushOptions) error
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>1950</y><w>580</w><h>680</h></coordinates><panel_attributes>Request
+--
+Method string
+URL *url.URL
+Proto      string
+ProtoMajor int
+ProtoMinor int
+Header Header
+Body io.ReadCloser
+GetBody func() (io.ReadCloser, error)
+ContentLength int64
+TransferEncoding []string
+Close bool
+Host string
+Form url.Values
+PostForm url.Values
+MultipartForm *multipart.Form
+Trailer Header
+RemoteAddr string
+RequestURI string
+TLS *tls.ConnectionState
+Cancel &lt;-chan struct{}
+Response *Response
+--
+NewRequest(method, url string, body io.Reader) (*Request, error)
+NewRequestWithContext(ctx context.Context, method, url string, body io.Reader) (*Request, error)
+ReadRequest(b *bufio.Reader) (*Request, error)
+(r *Request) AddCookie(c *Cookie)
+(r *Request) BasicAuth() (username, password string, ok bool)
+(r *Request) Clone(ctx context.Context) *Request
+(r *Request) Context() context.Context
+(r *Request) Cookie(name string) (*Cookie, error)
+(r *Request) Cookies() []*Cookie
+(r *Request) FormFile(key string) (multipart.File, *multipart.FileHeader, error)
+(r *Request) FormValue(key string) string
+(r *Request) MultipartReader() (*multipart.Reader, error)
+(r *Request) ParseForm() error
+(r *Request) ParseMultipartForm(maxMemory int64) error
+(r *Request) PostFormValue(key string) string
+(r *Request) ProtoAtLeast(major, minor int) bool
+(r *Request) Referer() string
+(r *Request) SetBasicAuth(username, password string)
+(r *Request) UserAgent() string
+(r *Request) WithContext(ctx context.Context) *Request
+(r *Request) Write(w io.Writer) error
+(r *Request) WriteProxy(w io.Writer) error
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>1950</y><w>420</w><h>380</h></coordinates><panel_attributes>Response
+--
+Status     string 
+StatusCode int    
+Proto      string 
+ProtoMajor int    
+ProtoMinor int    
+Header Header
+Body io.ReadCloser
+ContentLength int64
+TransferEncoding []string
+Close bool
+Uncompressed bool
+Trailer Header
+Request *Request
+TLS *tls.ConnectionState
+--
+Get(url string) (resp *Response, err error)
+Head(url string) (resp *Response, err error)
+Post(url, contentType string, body io.Reader) (resp *Response, err error)
+PostForm(url string, data url.Values) (resp *Response, err error)
+ReadResponse(r *bufio.Reader, req *Request) (*Response, error)
+(r *Response) Cookies() []*Cookie
+(r *Response) Location() (*url.URL, error)
+(r *Response) ProtoAtLeast(major, minor int) bool
+(r *Response) Write(w io.Writer) error
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>2490</y><w>400</w><h>140</h></coordinates><panel_attributes>ResponseController
+--
+
+--
+NewResponseController(rw ResponseWriter) *ResponseController
+(c *ResponseController) Flush() error
+(c *ResponseController) Hijack() (net.Conn, *bufio.ReadWriter, error)
+(c *ResponseController) SetReadDeadline(deadline time.Time) error
+(c *ResponseController) SetWriteDeadline(deadline time.Time) error
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>2390</y><w>180</w><h>70</h></coordinates><panel_attributes>ResponseWriter
+--
+Header() Header
+Write([]byte) (int, error)
+WriteHeader(statusCode int)
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1640</x><y>410</y><w>310</w><h>70</h></coordinates><panel_attributes>RoundTripper
+--
+RoundTrip(*Request) (*Response, error)
+--
+NewFileTransport(fs FileSystem) RoundTripper
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1410</x><y>1250</y><w>100</w><h>40</h></coordinates><panel_attributes>SameSite
+--
+int
+
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>1750</y><w>500</w><h>140</h></coordinates><panel_attributes>ServeMux
+--
+
+--
+NewServeMux() *ServeMux
+(mux *ServeMux) Handle(pattern string, handler Handler)
+(mux *ServeMux) HandleFunc(pattern string, handler func(ResponseWriter, *Request))
+(mux *ServeMux) Handler(r *Request) (h Handler, pattern string)
+(mux *ServeMux) ServeHTTP(w ResponseWriter, r *Request)
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>410</y><w>720</w><h>470</h></coordinates><panel_attributes>Transport
+--
+Proxy func(*Request) (*url.URL, error)
+OnProxyConnectResponse func(ctx context.Context, proxyURL *url.URL, connectReq *Request, connectRes *Response) error
+DialContext func(ctx context.Context, network, addr string) (net.Conn, error)
+Dial func(network, addr string) (net.Conn, error)
+DialTLSContext func(ctx context.Context, network, addr string) (net.Conn, error)
+DialTLS func(network, addr string) (net.Conn, error)
+TLSClientConfig *tls.Config
+TLSHandshakeTimeout time.Duration
+DisableKeepAlives bool
+DisableCompression bool
+MaxIdleConns int
+MaxIdleConnsPerHost int
+MaxConnsPerHost int
+IdleConnTimeout time.Duration
+ResponseHeaderTimeout time.Duration
+ExpectContinueTimeout time.Duration
+TLSNextProto map[string]func(authority string, c *tls.Conn) RoundTripper
+ProxyConnectHeader Header
+GetProxyConnectHeader func(ctx context.Context, proxyURL *url.URL, target string) (Header, error)
+MaxResponseHeaderBytes int64
+WriteBufferSize int
+ReadBufferSize int
+ForceAttemptHTTP2 bool
+
+--
+~(t *Transport) CancelRequest(req *Request)~
+(t *Transport) Clone() *Transport
+(t *Transport) CloseIdleConnections()
+(t *Transport) RegisterProtocol(scheme string, rt RoundTripper)
+(t *Transport) RoundTrip(req *Request) (*Response, error)
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>920</y><w>180</w><h>60</h></coordinates><panel_attributes>ConnState
+--
+int
+--
+(c ConnState) String() string
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>920</y><w>170</w><h>120</h></coordinates><panel_attributes>http
+--
+StateNew ConnState = iota
+--
+StateActive
+--
+StateIdle
+--
+StateHijacked
+--
+StateClosed
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>1130</y><w>230</w><h>60</h></coordinates><panel_attributes>Dir
+--
+string
+--
+(d Dir) Open(name string) (File, error)
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1520</x><y>1250</y><w>260</w><h>110</h></coordinates><panel_attributes>http
+--
+SameSiteDefaultMode SameSite = iota + 1
+--
+SameSiteLaxMode
+--
+SameSiteStrictMode
+--
+SameSiteNoneMode
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>60</y><w>100</w><h>50</h></coordinates><panel_attributes>function
+--
+type
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>130</y><w>80</w><h>30</h></coordinates><panel_attributes>Constant
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element></diagram>

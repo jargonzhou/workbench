@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: jpa-h2
+  # 数据库初始化: https://docs.spring.io/spring-boot/how-to/data-initialization.html
+  jpa:
+    hibernate:
+      # import.sql
+      ddl-auto: create-drop
+  # JDBC, R2DBC
+#  sql:
+#    init:
+#      mode: always
+#      schema-locations: optional:classpath*:schema.sql
+#      data-locations: optional:classpath*:data.sql

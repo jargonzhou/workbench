@@ -1,0 +1,164 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLNote</id><coordinates><x>0</x><y>280</y><w>80</w><h>30</h></coordinates><panel_attributes>Legend
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>340</y><w>80</w><h>30</h></coordinates><panel_attributes>/Interface/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>390</y><w>80</w><h>30</h></coordinates><panel_attributes>AbstractClass
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>440</y><w>80</w><h>30</h></coordinates><panel_attributes>Constant
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>490</y><w>80</w><h>30</h></coordinates><panel_attributes>Class</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>140</y><w>80</w><h>30</h></coordinates><panel_attributes>Resources</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>220</y><w>300</w><h>30</h></coordinates><panel_attributes>SqlSessionFactoryBuilder</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>0</y><w>470</w><h>30</h></coordinates><panel_attributes>/SqlSessionFactory/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1290</x><y>0</y><w>610</w><h>30</h></coordinates><panel_attributes>/SqlSession/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>340</y><w>140</w><h>30</h></coordinates><panel_attributes>XMLConfigBuilder</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>370</y><w>140</w><h>30</h></coordinates><panel_attributes>Configuration parse()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>220</y><w>180</w><h>30</h></coordinates><panel_attributes>DefaultSqlSessionFactory</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>250</y><w>300</w><h>40</h></coordinates><panel_attributes>halign=left
+SqlSessionFactory build(InputStream inputStream)
+SqlSessionFactory build(Configuration config)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>160</y><w>100</w><h>80</h></coordinates><panel_attributes>lt=&lt;..
+inputStream</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>280</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>470</y><w>310</w><h>30</h></coordinates><panel_attributes>Configuration</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>390</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=&lt;..
+parse</panel_attributes><additional_attributes>120;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>210</y><w>140</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+create</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>250</y><w>180</w><h>30</h></coordinates><panel_attributes>Configuration configuration</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>30</y><w>470</w><h>140</h></coordinates><panel_attributes>halign=left
+SqlSession openSession();
+SqlSession openSession(boolean autoCommit);
+SqlSession openSession(Connection connection);
+SqlSession openSession(TransactionIsolationLevel level);
+SqlSession openSession(ExecutorType execType);
+SqlSession openSession(ExecutorType execType, boolean autoCommit);
+SqlSession openSession(ExecutorType execType, TransactionIsolationLevel level);
+SqlSession openSession(ExecutorType execType, Connection connection);
+Configuration getConfiguration();
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>160</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1420</x><y>540</y><w>190</w><h>30</h></coordinates><panel_attributes>DefaultSqlSession</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1290</x><y>30</y><w>610</w><h>470</h></coordinates><panel_attributes>halign=left
+&lt;T&gt; T selectOne(String statement);
+&lt;T&gt; T selectOne(String statement, Object parameter);
+&lt;E&gt; List&lt;E&gt; selectList(String statement);
+&lt;E&gt; List&lt;E&gt; selectList(String statement, Object parameter);
+&lt;E&gt; List&lt;E&gt; selectList(String statement, Object parameter, RowBounds rowBounds);
+&lt;K, V&gt; Map&lt;K, V&gt; selectMap(String statement, String mapKey);
+&lt;K, V&gt; Map&lt;K, V&gt; selectMap(String statement, Object parameter, String mapKey);
+&lt;K, V&gt; Map&lt;K, V&gt; selectMap(String statement, Object parameter, String mapKey, RowBounds rowBounds);
+&lt;T&gt; Cursor&lt;T&gt; selectCursor(String statement);
+&lt;T&gt; Cursor&lt;T&gt; selectCursor(String statement, Object parameter);
+&lt;T&gt; Cursor&lt;T&gt; selectCursor(String statement, Object parameter, RowBounds rowBounds);
+void select(String statement, Object parameter, ResultHandler handler);
+void select(String statement, ResultHandler handler);
+void select(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler);
+int insert(String statement);
+int insert(String statement, Object parameter);
+int update(String statement);
+int update(String statement, Object parameter);
+int delete(String statement);
+int delete(String statement, Object parameter);
+
+void commit();
+void commit(boolean force);
+void rollback();
+void rollback(boolean force);
+List&lt;BatchResult&gt; flushStatements();
+void close();
+void clearCache();
+Configuration getConfiguration();
+&lt;T&gt; T getMapper(Class&lt;T&gt; type);
+Connection getConnection();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>260</y><w>330</w><h>30</h></coordinates><panel_attributes>MapperRegistry</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>290</y><w>330</w><h>40</h></coordinates><panel_attributes>halign=left
+Configuration config
+Map&lt;Class&lt;?&gt;, MapperProxyFactory&lt;?&gt;&gt; knownMappers
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>430</y><w>160</w><h>30</h></coordinates><panel_attributes>XMLMapperEntityResolver</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>350</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;..
+use</panel_attributes><additional_attributes>10;80;10;10;80;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>460</y><w>160</w><h>40</h></coordinates><panel_attributes>halign=left
+mybatis-3-config.dtd
+mybatis-3-mapper.dtd</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>370</y><w>140</w><h>30</h></coordinates><panel_attributes>XMLMapperBuilder</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>290</y><w>80</w><h>30</h></coordinates><panel_attributes>BaseBuilder
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>310</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>300</y><w>80</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>810</y><w>230</w><h>30</h></coordinates><panel_attributes>JdbcTransactionFactory</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>560</y><w>230</w><h>50</h></coordinates><panel_attributes>halign=left
+String id
+TransactionFactory transactionFactory
+DataSource dataSource</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>500</y><w>310</w><h>220</h></coordinates><panel_attributes>halign=left
+Environment environment
+boolean safeRowBoundsEnabled
+...
+MapperRegistry mapperRegistry
+InterceptorChain interceptorChain
+TypeHandlerRegistry typeHandlerRegistry
+TypeAliasRegistry typeAliasRegistry
+LanguageDriverRegistry languageRegistry
+
+Map&lt;String, MappedStatement&gt; mappedStatements
+Map&lt;String, ResultMap&gt; resultMaps
+Map&lt;String, ParameterMap&gt; parameterMaps
+Map&lt;String, KeyGenerator&gt; keyGenerators
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>670</y><w>320</w><h>30</h></coordinates><panel_attributes>/TransactionFactory/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>700</y><w>320</w><h>70</h></coordinates><panel_attributes>halign=left
+void setProperties(Properties props)
+Transaction newTransaction(Connection conn)
+Transaction newTransaction(DataSource dataSource, 
+  TransactionIsolationLevel level, boolean autoCommit)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>530</y><w>230</w><h>30</h></coordinates><panel_attributes>Environment</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>860</y><w>230</w><h>30</h></coordinates><panel_attributes>ManagedTransactionFactory</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>760</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>760</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>770</y><w>170</w><h>30</h></coordinates><panel_attributes>/Transaction/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>800</y><w>170</w><h>80</h></coordinates><panel_attributes>halign=left
+Connection getConnection()
+void commit()
+void rollback()
+void close()
+Integer getTimeout()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>710</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;..
+create</panel_attributes><additional_attributes>90;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>480</y><w>110</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>570</y><w>290</w><h>30</h></coordinates><panel_attributes>/Executor/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1420</x><y>570</y><w>190</w><h>80</h></coordinates><panel_attributes>halign=left
+Configuration configuration
+Executor executor
+boolean autoCommit
+boolean dirty
+List&lt;Cursor&lt;?&gt;&gt; cursorList</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1500</x><y>490</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>1040</y><w>100</w><h>30</h></coordinates><panel_attributes>BatchExecutor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>1040</y><w>100</w><h>30</h></coordinates><panel_attributes>ReuseExecutor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1010</x><y>1040</y><w>100</w><h>30</h></coordinates><panel_attributes>SimpleExecutor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>850</y><w>210</w><h>30</h></coordinates><panel_attributes>CachingExecutor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>600</y><w>290</w><h>170</h></coordinates><panel_attributes>halign=left
+update(MappedStatement ms, Object parameter)
+&lt;E&gt; List&lt;E&gt; query(MappedStatement ms, 
+  Object parameter, 
+  RowBounds rowBounds, 
+  ResultHandler resultHandler)
+...
+void commit(boolean required) 
+void rollback(boolean required) 
+...
+Transaction getTransaction();
+void close(boolean forceRollback);
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>950</x><y>760</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>20;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>820</y><w>260</w><h>30</h></coordinates><panel_attributes>BaseExecutor
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>760</y><w>270</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;250;90</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>940</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>940</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>940</y><w>140</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1640</x><y>630</y><w>130</w><h>30</h></coordinates><panel_attributes>MapperProxyFactory</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1860</x><y>630</y><w>310</w><h>30</h></coordinates><panel_attributes>MapperProxy</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1860</x><y>570</y><w>200</w><h>30</h></coordinates><panel_attributes>/java.lang.reflect.InvocationHandler/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1930</x><y>590</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>620</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+create</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1860</x><y>660</y><w>310</w><h>50</h></coordinates><panel_attributes>halign=left
+SqlSession sqlSession
+Class&lt;T&gt; mapperInterface
+Map&lt;Method, MapperMethodInvoker&gt; methodCache</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2100</x><y>750</y><w>200</w><h>30</h></coordinates><panel_attributes>PlainMethodInvoker</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2250</x><y>660</y><w>210</w><h>30</h></coordinates><panel_attributes>/MapperProxy.MapperMethodInvoker/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2330</x><y>750</y><w>300</w><h>30</h></coordinates><panel_attributes>DefaultMethodInvoker</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2330</x><y>780</y><w>300</w><h>30</h></coordinates><panel_attributes>java.lang.invoke.MethodHandle methodHandle</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2100</x><y>780</y><w>200</w><h>30</h></coordinates><panel_attributes>MapperMethod mapperMethod</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2210</x><y>680</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>2310</x><y>680</y><w>160</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;140;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1840</x><y>780</y><w>160</w><h>30</h></coordinates><panel_attributes>MapperMethod</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1840</x><y>810</y><w>160</w><h>40</h></coordinates><panel_attributes>halign=left
+SqlCommand command
+MethodSignature method</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1590</x><y>780</y><w>180</w><h>30</h></coordinates><panel_attributes>MapperMethod.SqlCommand</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1590</x><y>810</y><w>180</w><h>40</h></coordinates><panel_attributes>halign=left
+String name
+SqlCommandType type
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1420</x><y>880</y><w>350</w><h>30</h></coordinates><panel_attributes>MapperMethod.MethodSignature</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1420</x><y>910</y><w>350</w><h>30</h></coordinates><panel_attributes>Object convertArgsToSqlCommandParam(Object[] args)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1600</x><y>550</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;..
+getMapper</panel_attributes><additional_attributes>120;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1990</x><y>780</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>780</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>790</y><w>100</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>1150</y><w>290</w><h>30</h></coordinates><panel_attributes>halign=left
+BoundSql getBoundSql(Object parameterObject)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>780</y><w>290</w><h>30</h></coordinates><panel_attributes>MappedStatement</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>1120</y><w>290</w><h>30</h></coordinates><panel_attributes>/SqlSource/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>1190</y><w>90</w><h>30</h></coordinates><panel_attributes>BoundSql</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>860</y><w>90</w><h>30</h></coordinates><panel_attributes>RowBounds</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>700</y><w>360</w><h>30</h></coordinates><panel_attributes>/ResultHandler/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>730</y><w>360</w><h>30</h></coordinates><panel_attributes>void handleResult(ResultContext&lt;? extends T&gt; resultContext)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>600</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>130</y><w>600</w><h>130</h></coordinates><panel_attributes>lt=&lt;..
+create</panel_attributes><additional_attributes>580;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>630</y><w>340</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>320;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>550</y><w>760</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>740;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>300</y><w>170</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;170;10;10;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>650</y><w>150</w><h>230</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;210;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>650</y><w>70</w><h>80</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>50;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>650</y><w>70</w><h>160</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>50;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>880</y><w>210</w><h>40</h></coordinates><panel_attributes>halign=left
+Executor delegate
+TransactionalCacheManager tcm</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>1030</y><w>290</w><h>30</h></coordinates><panel_attributes>/Cache/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>1060</y><w>290</w><h>100</h></coordinates><panel_attributes>halign=left
+String getId()
+void putObject(Object key, Object value)
+Object getObject(Object key)
+Object removeObject(Object key)
+void clear()
+default ReadWriteLock getReadWriteLock()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1240</x><y>1200</y><w>100</w><h>30</h></coordinates><panel_attributes>PerpetualCache</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1280</x><y>1150</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>850</y><w>260</w><h>100</h></coordinates><panel_attributes>halign=left
+Transaction transaction
+Executor wrapper
+PerpetualCache localCache
+PerpetualCache localOutputParameterCache
+Configuration configuration
+...
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>950</y><w>180</w><h>30</h></coordinates><panel_attributes>InterceptorChain</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>710</y><w>30</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;240</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>980</y><w>180</w><h>30</h></coordinates><panel_attributes>List&lt;Interceptor&gt; interceptors</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>950</y><w>280</w><h>30</h></coordinates><panel_attributes>/Interceptor/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>910</y><w>220</w><h>30</h></coordinates><panel_attributes>/java.lang.reflect.InvocationHandler/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1080</y><w>340</w><h>30</h></coordinates><panel_attributes>Plugin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1110</y><w>340</w><h>60</h></coordinates><panel_attributes>halign=left
+Object target
+Interceptor interceptor
+Map&lt;Class&lt;?&gt;, Set&lt;Method&gt;&gt; signatureMap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>930</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>1080</y><w>200</w><h>30</h></coordinates><panel_attributes>Invocation</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>1110</y><w>200</w><h>50</h></coordinates><panel_attributes>halign=left
+Object target
+java.lang.reflect.Method method
+Object[] args</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>980</y><w>280</w><h>60</h></coordinates><panel_attributes>halign=left
+Object intercept(Invocation invocation)
+default Object plugin(Object target)
+default void setProperties(Properties properties)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>970</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>960</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1170</y><w>340</w><h>20</h></coordinates><panel_attributes>halign=left
+static Object wrap(Object target, Interceptor interceptor)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>1030</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>100;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>1160</y><w>200</w><h>20</h></coordinates><panel_attributes>halign=left
+Object proceed()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>1210</y><w>200</w><h>30</h></coordinates><panel_attributes>MyPlugin</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>1030</y><w>30</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>UMLNote</id><coordinates><x>510</x><y>1200</y><w>120</w><h>30</h></coordinates><panel_attributes>Plugin extension
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>1220</y><w>130</w><h>30</h></coordinates><panel_attributes>@Intercepts
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>1250</y><w>130</w><h>30</h></coordinates><panel_attributes>Signature[] value()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>1310</y><w>130</w><h>30</h></coordinates><panel_attributes>@Signature
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>1340</y><w>130</w><h>30</h></coordinates><panel_attributes>halign=left
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1080</x><y>60</y><w>80</w><h>30</h></coordinates><panel_attributes>SqlSession
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1130</x><y>580</y><w>80</w><h>30</h></coordinates><panel_attributes>Executor
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1160</x><y>970</y><w>80</w><h>30</h></coordinates><panel_attributes>Cache
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element></diagram>

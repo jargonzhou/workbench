@@ -1,0 +1,126 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>30</x><y>70</y><w>80</w><h>30</h></coordinates><panel_attributes>/Interface/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>120</y><w>80</w><h>30</h></coordinates><panel_attributes>AbstractClass
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>170</y><w>80</w><h>30</h></coordinates><panel_attributes>Constant
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>220</y><w>80</w><h>30</h></coordinates><panel_attributes>Class</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>30</x><y>10</y><w>80</w><h>30</h></coordinates><panel_attributes>Legend
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>150</y><w>290</w><h>240</h></coordinates><panel_attributes>/core/
+/Observable&lt;T&gt;/
+--
+/create(ObservableOnSubscribe&lt;T&gt;): Observable&lt;T&gt;/
+...
+--
+subscribe(Observer): Subscription
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1120</x><y>10</y><w>210</w><h>120</h></coordinates><panel_attributes>/core/
+/Observer&lt;T&gt;/
+--
+onNext(T): void
+onError(Throwable): void
+onComplete(): void
+onSubscribe(Disposable): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>740</y><w>210</w><h>80</h></coordinates><panel_attributes>/org.reactivestreams/
+/Subscription/
+--
+cancel(): void
+request​(long n): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>740</y><w>230</w><h>70</h></coordinates><panel_attributes>/org.reactivestreams/
+/Publisher&lt;R&gt;/
+--
+subscribe(Subscriber&lt;? super R&gt;): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>740</y><w>210</w><h>110</h></coordinates><panel_attributes>/org.reactivestreams/
+/Subscriber&lt;T&gt;/
+--
+onComplete(): void
+onError(Throwable): void
+onNext(T)
+onSubcriber(Subscription): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1120</x><y>200</y><w>240</w><h>70</h></coordinates><panel_attributes>/core/
+/ObservableOnSubscribe&lt;T&gt;/
+--
+subscribe(ObservableEmitter&lt;T&gt;): void 
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1440</x><y>190</y><w>240</w><h>130</h></coordinates><panel_attributes>/core/
+/ObservableEmitter&lt;T&gt;/
+--
+isDisposed(): boolean
+serialize(): ObservableEmitter&lt;T&gt;
+setCancellable(Cancellable): void
+setDisposable(Disposable): void
+tryOnError(Throwable): boolean
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1470</x><y>10</y><w>170</w><h>100</h></coordinates><panel_attributes>/core/
+/Emitter&lt;T&gt;/
+--
+onNext(T): void
+onComplete(): void
+onError(Throwable): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1540</x><y>100</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>220</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1430</x><y>410</y><w>130</w><h>70</h></coordinates><panel_attributes>/functions/
+/Cancellable/
+--
+cancel(): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1430</x><y>510</y><w>170</w><h>120</h></coordinates><panel_attributes>/disposables/
+/Disposable/
+--
+disposed(): Disposable
+...
+--
+dispose(): void
+isDisposed(): boolean
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>500</y><w>290</w><h>140</h></coordinates><panel_attributes>/subjects/
+/Subject&lt;T&gt;/
+--
+--
+/hasThrowable(): boolean/
+/getThrowable(): Throwable/
+/hasComplete(): boolean/
+/hasObservers(): boolean/
+toSerialized(): Subject&lt;T&gt;
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>380</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1010</x><y>90</y><w>130</w><h>440</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;10;10;420</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>750</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1170</x><y>750</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>950</y><w>230</w><h>70</h></coordinates><panel_attributes>/org.reactivestreams/
+/Processor&lt;T,​R&gt;/
+--
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>800</y><w>170</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;150</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>840</y><w>160</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1100</x><y>950</y><w>460</w><h>150</h></coordinates><panel_attributes>/FlowAdapters/
+--
+toFlowProcessor(Processor&lt;? super T,? extends U&gt;): juc.Flow.Processor&lt;T,U&gt;
+toFlowPublisher(Publisher&lt;? extends T&gt;): juc.Flow.Publisher&lt;T&gt;
+toFlowSubscriber(Subscriber&lt;T&gt;): juc.Flow.Subscriber&lt;T&gt;
+toProcessor(juc.Flow.Publisher&lt;? super T,? extends U&gt;): Processor&lt;T&gt;
+toPublisher​(juc.Flow.Publisher&lt;? extends T&gt;): Publisher&lt;T&gt;
+toSubscriber(juc.Flow.Subscriber&lt;T&gt;): Subscriber&lt;T&gt;
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>10</y><w>290</w><h>70</h></coordinates><panel_attributes>/core/
+/ObservableSource&lt;T&gt;/
+--
+subscribe(Observer&lt;? super T&gt; observer): void
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>70</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>20</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>250</y><w>290</w><h>100</h></coordinates><panel_attributes>/core/
+/ConnectableObservable&lt;T&gt;/
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>530</y><w>50</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>30;210;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>430</y><w>290</w><h>100</h></coordinates><panel_attributes>/core/
+/Single&lt;T&gt;/
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>560</y><w>290</w><h>100</h></coordinates><panel_attributes>/core/
+/Maybe&lt;T&gt;/
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>700</y><w>290</w><h>100</h></coordinates><panel_attributes>/core/
+/Completable&lt;T&gt;/
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>440</y><w>290</w><h>100</h></coordinates><panel_attributes>/core/
+/Flowable&lt;T&gt;/
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>220</y><w>180</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;70</additional_attributes></element></diagram>

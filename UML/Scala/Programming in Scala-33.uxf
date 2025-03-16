@@ -1,0 +1,119 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>360</x><y>70</y><w>100</w><h>40</h></coordinates><panel_attributes>class
+#a4c639
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>70</y><w>100</w><h>40</h></coordinates><panel_attributes>object
+#006b3c
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>140</y><w>100</w><h>40</h></coordinates><panel_attributes>/abstract class/
+#ff9966
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>140</y><w>100</w><h>40</h></coordinates><panel_attributes>trait
+#ff9966
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>210</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.
+implicit conversion</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>230</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-
+extends</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>250</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;.
+implemts</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>270</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+linearization</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>650</x><y>0</y><w>320</w><h>30</h></coordinates><panel_attributes>scala.util.parsing.input
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>640</x><y>400</y><w>320</w><h>30</h></coordinates><panel_attributes>scala.util.parsing.combinator
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>320</x><y>1160</y><w>320</w><h>30</h></coordinates><panel_attributes>scala.util.parsing.combinator.lexical
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1010</x><y>1140</y><w>320</w><h>30</h></coordinates><panel_attributes>scala.util.parsing.combinator.syntactical
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>690</x><y>1370</y><w>320</w><h>30</h></coordinates><panel_attributes>scala.util.parsing.combinator.token
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>1430</y><w>100</w><h>40</h></coordinates><panel_attributes>Tokens
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>1520</y><w>100</w><h>40</h></coordinates><panel_attributes>StdTokens
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>1460</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>480</y><w>170</w><h>200</h></coordinates><panel_attributes>Parsers
+--
+/abstract type Elem/
+type Input = Reader[Elem]
+--
+accept              not      opt
+chainl1             phrase
+chainr1             positioned
+commit              rep
+elem                  rep1
+err                      repsep
+failure                 success
+guard                 
+log                     mkList
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>730</y><w>150</w><h>170</h></coordinates><panel_attributes>RegexParsers
+--
+type Elem = Char
+--
+err
+literal
+parse
+parseAll
+phrase
+positioned
+regex
+skipWhitespace
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>670</y><w>200</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>750</y><w>130</w><h>60</h></coordinates><panel_attributes>PackratParsers
+--
+memo
+phrase
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>670</y><w>190</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;170;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>940</y><w>150</w><h>110</h></coordinates><panel_attributes>JavaTokenParsers
+--
+decimalNumber
+floatingPointNumber
+ident
+stringLiteral
+wholeNumber
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>890</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1000</x><y>480</y><w>130</w><h>40</h></coordinates><panel_attributes>ImplicitConversions
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>1200</y><w>130</w><h>60</h></coordinates><panel_attributes>Scanners
+--
+type Elem = Char
+type Token
+
+
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>670</y><w>160</w><h>550</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;530</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>1270</y><w>100</w><h>40</h></coordinates><panel_attributes>/Lexical/
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>1210</y><w>200</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>180;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>1280</y><w>270</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>250;170;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>1370</y><w>100</w><h>40</h></coordinates><panel_attributes>StdLexical
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>1300</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>1380</y><w>270</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>250;170;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>1200</y><w>100</w><h>40</h></coordinates><panel_attributes>TokenParsers
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>670</y><w>170</w><h>550</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;530</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1110</x><y>1260</y><w>100</w><h>40</h></coordinates><panel_attributes>StdTokenParsers
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>1210</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>1380</y><w>140</w><h>40</h></coordinates><panel_attributes>StandardTokenParsers
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1150</x><y>1290</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>40</y><w>220</w><h>120</h></coordinates><panel_attributes>/Reader[+T]/
+--
+/def atEnd: Boolean/
+/def first: T/
+/def pos: Position/
+/def rest: Reader[T]/
+--
+def source: java.lang.CharSequence
+ef offset: Int
+
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>200</y><w>130</w><h>40</h></coordinates><panel_attributes>CharSequenceReader
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>150</y><w>100</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-
+T = Char</panel_attributes><additional_attributes>80;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>290</y><w>130</w><h>50</h></coordinates><panel_attributes>CharArrayReader
+--
+chars: Array[Char]
+
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>230</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>220</y><w>130</w><h>40</h></coordinates><panel_attributes>PagedSeqReader
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>150</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-
+T = Char</panel_attributes><additional_attributes>10;10;120;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>290</y><w>130</w><h>40</h></coordinates><panel_attributes>StreamReader
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>250</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>980</x><y>220</y><w>130</w><h>40</h></coordinates><panel_attributes>PagedSeq[T]
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>60</y><w>180</w><h>60</h></coordinates><panel_attributes>Positional
+--
+var pos: Position
+def setPos(newpos: Position)
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>140</y><w>110</w><h>60</h></coordinates><panel_attributes>Position
+--
+def column: Int
+def line: Int
+
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>230</y><w>100</w><h>60</h></coordinates><panel_attributes>NoPosition
+--
+def line = 0
+def column = 0
+
+bg=#006b3c</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1210</x><y>190</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>390</y><w>100</w><h>40</h></coordinates><panel_attributes>~[+a, +b]
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>380</y><w>100</w><h>40</h></coordinates><panel_attributes>/ParseResult[+T]/
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>470</y><w>100</w><h>40</h></coordinates><panel_attributes>/Parser[+T]/
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>380</y><w>150</w><h>40</h></coordinates><panel_attributes>(Input) ⇒ ParseResult[T]
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>410</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>550</y><w>100</w><h>40</h></coordinates><panel_attributes>OnceParser[+T]
+bg=#007fff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>500</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>470</y><w>100</w><h>40</h></coordinates><panel_attributes>/NoSuccess/
+bg=#ff9966</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>410</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-
+T = Nothing</panel_attributes><additional_attributes>90;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>550</y><w>100</w><h>40</h></coordinates><panel_attributes>Failure
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>500</y><w>110</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>550</y><w>100</w><h>40</h></coordinates><panel_attributes>Error
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>500</y><w>100</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>470</y><w>100</w><h>40</h></coordinates><panel_attributes>Success[+T]
+bg=#a4c639</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>410</y><w>100</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;60</additional_attributes></element></diagram>

@@ -1,0 +1,11 @@
+server:
+  port: 18028
+
+logging:
+  # use Logback
+  config: classpath:logback.xml
+
+spring:
+  application:
+    name: grafana
+

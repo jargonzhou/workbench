@@ -85,7 +85,7 @@ func JsonResponseMiddleWare(next http.Handler) http.Handler {
 }
 
 // 身份认证中间件
-// TODO 增加额外的校验逻辑
+// 需要增加额外的校验逻辑
 func AuthenticationMiddleware(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	if r.URL.Path == "/api/user/login" {
 		next(w, r)

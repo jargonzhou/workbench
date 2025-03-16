@@ -8,7 +8,7 @@ Scala Versions:
 * 3.x
 
 
-TODO:
+More:
 * [Vegas](https://github.com/vegas-viz/Vegas): The missing MatPlotLib for Scala + Spark
 * [EvilPlot](https://cibotech.github.io/evilplot/): Combinators for graphics
 

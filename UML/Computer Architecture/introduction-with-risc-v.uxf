@@ -1,0 +1,112 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;180&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;...
+bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;140&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;160&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;140&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;160&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;140&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;160&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;140&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;160&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;140&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;60&lt;/x&gt;&lt;y&gt;160&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;20&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;bg=blue&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;</help_text><element><id>UMLClass</id><coordinates><x>532</x><y>880</y><w>100</w><h>40</h></coordinates><panel_attributes>RV32I
+ CPU</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>372</x><y>960</y><w>770</w><h>20</h></coordinates><panel_attributes>bus</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>372</x><y>1030</y><w>160</w><h>50</h></coordinates><panel_attributes>halign=center
+Main Memory
+(0x10000000-0xFFFFFFF)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>602</x><y>1030</y><w>200</w><h>90</h></coordinates><panel_attributes>halign=center
+Keypad Controller
+--
+Data Register (0x10000050)
+00001000
+--
+Status Register (0x10000054)
+00000000
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>1180</y><w>30</w><h>30</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>682</x><y>1180</y><w>30</w><h>30</h></coordinates><panel_attributes>2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>712</x><y>1180</y><w>30</w><h>30</h></coordinates><panel_attributes>3</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>1210</y><w>30</w><h>30</h></coordinates><panel_attributes>4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>1240</y><w>30</w><h>30</h></coordinates><panel_attributes>7</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>1270</y><w>30</w><h>30</h></coordinates><panel_attributes>*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>682</x><y>1210</y><w>30</w><h>30</h></coordinates><panel_attributes>5</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>712</x><y>1210</y><w>30</w><h>30</h></coordinates><panel_attributes>6</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>682</x><y>1240</y><w>30</w><h>30</h></coordinates><panel_attributes>8</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>682</x><y>1270</y><w>30</w><h>30</h></coordinates><panel_attributes>0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>712</x><y>1240</y><w>30</w><h>30</h></coordinates><panel_attributes>9</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>712</x><y>1270</y><w>30</w><h>30</h></coordinates><panel_attributes>#</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>572</x><y>910</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>970</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>692</x><y>970</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>692</x><y>1110</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=-
+electrical wires</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>372</x><y>820</y><w>470</w><h>30</h></coordinates><panel_attributes>RV32I based computer system with a keypad and a seven-segment display.
+bg=#3c7a00</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>872</x><y>1030</y><w>200</w><h>60</h></coordinates><panel_attributes>halign=center
+Display Controller
+--
+Control Register (0x40)
+00000000
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>928</x><y>1143</y><w>70</w><h>40</h></coordinates><panel_attributes>lt=-
+lw=5.0
+a
+fg=red</panel_attributes><additional_attributes>10;20;50;20</additional_attributes></element><element><id>Relation</id><coordinates><x>928</x><y>1183</y><w>70</w><h>40</h></coordinates><panel_attributes>lt=-
+lw=5.0
+g
+fg=red</panel_attributes><additional_attributes>10;20;50;20</additional_attributes></element><element><id>Relation</id><coordinates><x>928</x><y>1223</y><w>70</w><h>50</h></coordinates><panel_attributes>lt=-
+lw=5.0
+r2=d
+r2pos=0,20
+fg=red
+</panel_attributes><additional_attributes>10;20;50;20</additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>1153</y><w>40</w><h>70</h></coordinates><panel_attributes>lt=-
+lw=5.0
+r2=f
+r2pos=-15,-20
+fg=red
+
+
+</panel_attributes><additional_attributes>20;50;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>1193</y><w>40</w><h>70</h></coordinates><panel_attributes>lt=-
+lw=5.0
+r2=e
+r2pos=-15,-20
+</panel_attributes><additional_attributes>20;50;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>1153</y><w>40</w><h>70</h></coordinates><panel_attributes>lt=-
+lw=5.0
+b</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>1193</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=-
+lw=5.0
+c
+fg=red</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>998</x><y>1223</y><w>40</w><h>40</h></coordinates><panel_attributes>lt=-
+lw=5.0
+p</panel_attributes><additional_attributes>10;20;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>918</x><y>1143</y><w>110</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>962</x><y>1080</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=-
+electrical wires</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>962</x><y>970</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>293</y><w>120</w><h>40</h></coordinates><panel_attributes>Internal RAM
+(boot memory)
+valign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>593</y><w>120</w><h>40</h></coordinates><panel_attributes>Main Memory
+(off-chip DDR2)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>333</y><w>120</w><h>20</h></coordinates><panel_attributes>...
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>293</y><w>120</w><h>20</h></coordinates><panel_attributes>0000 0000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>333</y><w>120</w><h>20</h></coordinates><panel_attributes>...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>353</y><w>120</w><h>40</h></coordinates><panel_attributes>UART-1
+valign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>413</y><w>120</w><h>40</h></coordinates><panel_attributes>GPT
+valign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>473</y><w>120</w><h>40</h></coordinates><panel_attributes>GPIO
+valign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>533</y><w>120</w><h>40</h></coordinates><panel_attributes>TZIC
+valign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>393</y><w>120</w><h>20</h></coordinates><panel_attributes>...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>453</y><w>120</w><h>20</h></coordinates><panel_attributes>...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>513</y><w>120</w><h>20</h></coordinates><panel_attributes>...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>388</x><y>573</y><w>120</w><h>20</h></coordinates><panel_attributes>...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>313</y><w>120</w><h>20</h></coordinates><panel_attributes>0001 0000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>353</y><w>120</w><h>20</h></coordinates><panel_attributes>53FB C000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>373</y><w>120</w><h>20</h></coordinates><panel_attributes>53FB FFFF
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>413</y><w>120</w><h>20</h></coordinates><panel_attributes>53FA 0000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>433</y><w>120</w><h>20</h></coordinates><panel_attributes>53FA 3FFF
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>473</y><w>120</w><h>20</h></coordinates><panel_attributes>53FB 4000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>493</y><w>120</w><h>20</h></coordinates><panel_attributes>53FB 400B
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>533</y><w>120</w><h>20</h></coordinates><panel_attributes>0FFF C000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>553</y><w>120</w><h>20</h></coordinates><panel_attributes>0FFF FFFF
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>593</y><w>120</w><h>20</h></coordinates><panel_attributes>7000 0000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>613</y><w>120</w><h>20</h></coordinates><panel_attributes>8000 0000
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>393</y><w>120</w><h>20</h></coordinates><panel_attributes>...
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>453</y><w>120</w><h>20</h></coordinates><panel_attributes>...
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>513</y><w>120</w><h>20</h></coordinates><panel_attributes>...
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>268</x><y>573</y><w>120</w><h>20</h></coordinates><panel_attributes>...
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>148</x><y>283</y><w>120</w><h>370</h></coordinates><panel_attributes>lt=&lt;-
+r1=Address space
+r1pos=-100,10
+</panel_attributes><additional_attributes>100;350;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>508</x><y>293</y><w>50</w><h>40</h></coordinates><panel_attributes>64 KB
+valign=center
+halign=left
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>508</x><y>353</y><w>50</w><h>40</h></coordinates><panel_attributes>16 KB
+valign=center
+halign=left
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>508</x><y>413</y><w>50</w><h>40</h></coordinates><panel_attributes>16 KB
+valign=center
+halign=left
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>508</x><y>473</y><w>50</w><h>40</h></coordinates><panel_attributes>12 B
+valign=center
+halign=left
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>508</x><y>533</y><w>50</w><h>40</h></coordinates><panel_attributes>16 KB
+valign=center
+halign=left
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>508</x><y>593</y><w>50</w><h>40</h></coordinates><panel_attributes>256 MB
+valign=center
+halign=left
+lw=0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>222</x><y>160</y><w>470</w><h>110</h></coordinates><panel_attributes>A single address space mapped into main memory and multiple peripherals.
+--
+Freescale i.MX53 platform.
+--
+UART: Universal Asynchromous Receiver-Transmitter
+GPT: General Purpose Timer
+GPIO: General-Purpose Input/Output
+TZIC: Trusted-Zone Interrupt Controller
+halign=left
+bg=#3c7a00</panel_attributes><additional_attributes></additional_attributes></element></diagram>
