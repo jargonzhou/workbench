@@ -26,6 +26,8 @@
 | [OkHttp MockWebServer](https://github.com/square/okhttp/tree/master/mockwebserver] | 4.12.0          |
 | Project Reactor                                                                    | 3.7.0           |
 | RxJava                                                                             | 3.1.10          |
+| ShardingSphere-JDBC                                                                | 5.5.2           |
+| [Micrometer](https://micrometer.io/)                                               | 1.14.1          |
 
 | Example                     | Port         | Description                                                                                                       |
 |:----------------------------|:-------------|:------------------------------------------------------------------------------------------------------------------|
@@ -59,7 +61,9 @@
 | stream-producer             | 18025        | spring-cloud-stream-binder-rabbit                                                                                 |
 | stream-consumer             | 18026        | spring-cloud-stream-binder-rabbit                                                                                 |
 | reactor                     | 18027        | reactor-bom                                                                                                       |
-| grafana                     | 18028        | loki-logback-appender                                                                                                                  |
+| grafana                     | 18028        | loki-logback-appender, micrometer-registry-prometheus                                                             |
+| skywalking                  | 18029        | apm-toolkit-logback-1.x                                                                                           |
+| shardingsphere              | 18030        | shardingsphere-jdbc                                                                                               |
 
 # IP
 

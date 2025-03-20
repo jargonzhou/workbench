@@ -1,6 +1,7 @@
 # mybatis
 
 MyBatis Generator: `com.spike.cloud.persistent.mybatis.Generator`.
+
 - Model, Mapper, XML, Example.
 - lombok.
 
@@ -35,7 +36,49 @@ Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaul
 ```
 
 Druid Monitor: `http://127.0.0.1:18011/druid`.
+
 - test cases: shutdown MySQL, then turn on.
+
+# seata
+
+```shell
+# init
+mysql> select * from account_tbl;
++----+---------+-------+
+| id | user_id | money |
++----+---------+-------+
+| 10 | U100001 | 10000 |
++----+---------+-------+
+
+# success
+curl --request GET \
+  --url 'http://127.0.0.1:18008/api/txn?mockFail=false'
+ok
+
+mysql> select * from account_tbl;
++----+---------+-------+
+| id | user_id | money |
++----+---------+-------+
+| 10 | U100001 |  9800 |
++----+---------+-------+
+  
+# fail
+curl --request GET \
+  --url 'http://127.0.0.1:18008/api/txn?mockFail=true'
+{
+  "timestamp": "...",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/api/txn"
+}
+
+mysql> select * from account_tbl;
++----+---------+-------+
+| id | user_id | money |
++----+---------+-------+
+| 10 | U100001 |  9800 |
++----+---------+-------+
+```
 
 # webmvc
 
@@ -46,3 +89,9 @@ Druid Monitor: `http://127.0.0.1:18011/druid`.
 
 - `@DataR2dbcTest`, Testcontainers
 - `@EnableR2dbcAuditing`
+
+# shardingsphere
+
+- `shardingsphere.sql`: init schema sql.
+- `shardingsphere-jdbc.yaml`: configuration.
+- `ShardingSphereTest`: tests.

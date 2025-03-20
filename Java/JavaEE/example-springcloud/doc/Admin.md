@@ -52,5 +52,30 @@ Hello, Jib!
 
 # grafana
 
+Grafana Loki:
 - Add datasource: Loki.
 - Explore: loki
+
+Prometheus metrics:
+```shell
+curl --request GET \
+  --url http://127.0.0.1:18028/actuator/prometheus \
+  --header 'Accept: application/openmetrics-text'
+```
+
+Tempo:
+```shell
+$ docker build -t eclipse-temurin:17-otel -f otel.Dockerfile .
+$ docker build -t dev/grafana-app .
+$ docker compose up -d
+```
+
+# skywalking
+
+- `skywalking.Dockerfile`: Java image with agent.
+- `logback.xml`: Logback with gRPC reporter.
+
+```shell
+$ docker build -t dev/skywalking-app .
+$ docker compose up -d
+```

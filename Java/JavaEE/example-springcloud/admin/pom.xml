@@ -26,5 +26,6 @@
         <module>buildpacks</module>
         <module>jib</module>
         <module>grafana</module>
+        <module>skywalking</module>
     </modules>
 </project>

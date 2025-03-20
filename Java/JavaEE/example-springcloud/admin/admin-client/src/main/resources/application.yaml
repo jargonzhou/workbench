@@ -29,6 +29,7 @@ spring:
       # admin server的URL
       client.url: http://127.0.0.1:18004
 
+# https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.actuator
 management:
   server.port: 18005
   # 开启所有端点

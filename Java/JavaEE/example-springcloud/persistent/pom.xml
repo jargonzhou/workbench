@@ -14,6 +14,7 @@
 
     <modules>
         <module>mybatis</module>
+        <module>seata</module>
         <module>shardingsphere</module>
         <module>jpa-h2</module>
     </modules>

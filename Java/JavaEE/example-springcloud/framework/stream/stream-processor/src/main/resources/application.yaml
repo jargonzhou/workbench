@@ -30,6 +30,7 @@ spring:
         packlabel-out-0:
           destination: order-dispatched
 
+# # https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.actuator
 # http://localhost:18024/actuator/health
 # http://localhost:18024/actuator/functions
 # http://localhost:18024/actuator/bindings

@@ -73,6 +73,7 @@ eureka:
     hostname: 127.0.0.1
     prefer-ip-address: true
 
+# # https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.actuator
 management:
   server.port: ${server.port}
   # 开启所有端点

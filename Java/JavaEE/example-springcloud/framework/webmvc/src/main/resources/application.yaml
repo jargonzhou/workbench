@@ -21,7 +21,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource # 默认
     driver-class: com.mysql.cj.jdbc.Driver
     # more: https://dev.mysql.com/doc/connector-j/en/connector-j-reference-configuration-properties.html
-    url: jdbc:mysql://localhost:3306/devops?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/devops?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true&allowMultiQueries=true
     username: root
     password: change_me
     # 连接池
