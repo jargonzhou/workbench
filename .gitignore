@@ -3,3 +3,5 @@ done.txt
 
 .metals
 *.log
+
+*.jar
