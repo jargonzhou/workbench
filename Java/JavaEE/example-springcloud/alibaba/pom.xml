@@ -21,6 +21,8 @@
     <modules>
         <module>nacos-config</module>
         <module>nacos-discovery</module>
+        <module>dubbo</module>
+        <module>sentinel</module>
     </modules>
 
     <dependencyManagement>
@@ -28,7 +30,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2023.0.3.2</version>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

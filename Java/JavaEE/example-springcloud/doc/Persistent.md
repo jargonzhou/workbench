@@ -1,3 +1,7 @@
+# jpa-h2
+
+H2 Console: `http://localhost:18011/h2-console`.
+
 # mybatis
 
 MyBatis Generator: `com.spike.cloud.persistent.mybatis.Generator`.

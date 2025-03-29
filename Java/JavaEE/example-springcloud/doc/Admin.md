@@ -79,3 +79,11 @@ $ docker compose up -d
 $ docker build -t dev/skywalking-app .
 $ docker compose up -d
 ```
+
+# sentinel
+
+```shell
+# use Windows WSL
+$ ab -n 21 -c 1 -m GET http://192.168.0.103:18031/books/hello/aaa
+$ ab -n 21 -c 1 -m GET http://192.168.0.103:18031/books/world/bbb
+```

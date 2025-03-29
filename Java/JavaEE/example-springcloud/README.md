@@ -28,6 +28,8 @@
 | RxJava                                                                             | 3.1.10          |
 | ShardingSphere-JDBC                                                                | 5.5.2           |
 | [Micrometer](https://micrometer.io/)                                               | 1.14.1          |
+| Dubbo                                                                              | 3.3.4           |
+| Sentinel                                                                           | 1.8.8           |
 
 | Example                     | Port         | Description                                                                                                       |
 |:----------------------------|:-------------|:------------------------------------------------------------------------------------------------------------------|
@@ -64,6 +66,7 @@
 | grafana                     | 18028        | loki-logback-appender, micrometer-registry-prometheus                                                             |
 | skywalking                  | 18029        | apm-toolkit-logback-1.x                                                                                           |
 | shardingsphere              | 18030        | shardingsphere-jdbc                                                                                               |
+| sentinel                    | 18031,18032  | sentinel-core                                                                                                     |
 
 # IP
 
