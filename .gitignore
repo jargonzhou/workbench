@@ -1,7 +1,15 @@
 todo.txt
 done.txt
 
+.idea
+
 .metals
 *.log
 
+target/
 *.jar
+
+*.pyc
+
+*.md
+!README.md
