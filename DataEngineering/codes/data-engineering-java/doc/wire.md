@@ -21,3 +21,7 @@ protocols:
   - SSL: `org.bouncycastle:bcpkix-jdk18on` - `ChatServerInitializer.Secure`
   - update ChannelPipeline: remove ChannelHandler - `TextWebSocketFrameHandler`
 - udp: `LogEventBroadcaster`, `LogEventMonitor`
+
+# DNS
+
+- `DNSJavaTest`

@@ -24,9 +24,14 @@
         <netty.version>4.1.118.Final</netty.version>
         <commons-net.version>3.11.1</commons-net.version>
         <bcpkix-jdk18on.version>1.80</bcpkix-jdk18on.version>
+        <bcprov-jdk18on.version>1.80</bcprov-jdk18on.version>
 
         <elasticjob-lite-core.version>3.0.4</elasticjob-lite-core.version>
         <mysql-connector-j.version>8.0.32</mysql-connector-j.version>
+
+        <jetcd.version>0.8.5</jetcd.version>
+
+        <curator.version>5.8.0</curator.version>
 
         <!-- Logback
         1.2.13: for SLF4j 1.7.x
@@ -41,11 +46,10 @@
     </properties>
 
     <modules>
-        <module>kafka</module>
-        <module>redis</module>
-        <module>rocketmq</module>
         <module>infrastructure</module>
-        <module>elasticjob</module>
+        <module>database</module>
+        <module>messaging</module>
+        <module>scheduling</module>
     </modules>
 
     <dependencyManagement>
@@ -80,6 +84,7 @@
                 <artifactId>assertj-core</artifactId>
                 <version>3.26.3</version>
             </dependency>
+            <!-- example: https://www.baeldung.com/awaitility-testing -->
             <dependency>
                 <groupId>org.awaitility</groupId>
                 <artifactId>awaitility</artifactId>

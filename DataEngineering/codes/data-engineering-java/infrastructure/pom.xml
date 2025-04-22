@@ -21,5 +21,6 @@
     <modules>
         <module>serdes</module>
         <module>wire</module>
+        <module>cryptography</module>
     </modules>
 </project>

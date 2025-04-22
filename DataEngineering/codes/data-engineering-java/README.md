@@ -9,23 +9,12 @@
 | RocketMQ Client | 5.0.7         |
 | ElasticJob      | 3.0.4         |
 
-Touches:
+- Infrastructure
+    - [serdes](./doc/serdes.md)
+    - [wire](./doc/wire.md)
+- [Database](./doc/database.md)
+- [Messaging](./doc/messaging.md)
+- [Scheduling](./doc/scheduling.md)
 
-- Kafka
-- Redis
-- RocketMQ
-
-# Infrastructure
-
-- [serdes](./doc/serdes.md)
-- [wire](./doc/wire.md)
-
-# Scheduling
-
-## ElasticJob
-
-- `com.spike.dataengineering.elasticjob.ElasticJobTest.oneOff`
-- `com.spike.dataengineering.elasticjob.ElasticJobTest.schedule`
-- `com.spike.dataengineering.elasticjob.ElasticJobTest.opsAPI`
 
 

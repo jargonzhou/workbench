@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.spike.dataengineering</groupId>
-        <artifactId>wire</artifactId>
+        <artifactId>database</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>netty</artifactId>
+    <artifactId>zookeeper</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,27 +18,36 @@
     </properties>
 
     <dependencies>
+        <!-- Maven / Artifacts: https://curator.apache.org/docs/about/ -->
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>${netty.version}</version>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-async</artifactId>
+            <version>${curator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>${curator.version}</version>
         </dependency>
 
-        <dependency> <!-- Apache Common Net -->
-            <groupId>commons-net</groupId>
-            <artifactId>commons-net</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcpkix-jdk18on</artifactId>
-            <version>${bcpkix-jdk18on.version}</version>
+        <dependency> <!-- for Strongly Typed Models -->
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.18.2</version>
         </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version.1_5_12}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>1.20.5</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -50,6 +59,11 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
         </dependency>
     </dependencies>
 </project>
