@@ -13,3 +13,6 @@ target/
 
 *.md
 !README.md
+
+.bsp/
+.scala-build/
