@@ -12,8 +12,10 @@
 - Infrastructure
     - [serdes](./doc/serdes.md)
     - [wire](./doc/wire.md)
+    - [logging](./doc/logging.md)
 - [Database](./doc/database.md)
 - [Messaging](./doc/messaging.md)
+- [Streaming](./doc/streaming.md)
 - [Scheduling](./doc/scheduling.md)
 
 

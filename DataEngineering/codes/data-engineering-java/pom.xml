@@ -33,6 +33,11 @@
 
         <curator.version>5.8.0</curator.version>
 
+        <flink.version>1.20.1</flink.version>
+
+        <!-- log4j2 -->
+        <log4j2.version>2.17.1</log4j2.version>
+
         <!-- Logback
         1.2.13: for SLF4j 1.7.x
         1.5.12: for SLF4j 2.0.12+
@@ -41,7 +46,7 @@
         <logback.version.1_5_12>1.5.12</logback.version.1_5_12>
 
         <!-- Testcontainers -->
-        <testcontainers-kafka.version>1.20.1</testcontainers-kafka.version>
+        <testcontainers-kafka.version>1.21.0</testcontainers-kafka.version>
         <testcontainers-redis.version>2.2.2</testcontainers-redis.version>
     </properties>
 
@@ -50,6 +55,7 @@
         <module>database</module>
         <module>messaging</module>
         <module>scheduling</module>
+        <module>streaming</module>
     </modules>
 
     <dependencyManagement>
