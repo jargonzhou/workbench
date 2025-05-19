@@ -20,6 +20,8 @@
 - [Haskell](./Haskell/_IHaskell.ipynb)
 - [Java.ipynb](./Java/Java.ipynb)
   - [jjava](./Java/_jjava.ipynb)
+- Machine Learning
+  - [Agents](./Machine%20Learning/Agents.ipynb) 
 - [Modeling](./Modeling/Modeling.ipynb)
   - [JFLAP](./Modeling/JFLAP/JFLAP.ipynb)
   - [SPIN](./Modeling/SPIN/SPIN.ipynb)
