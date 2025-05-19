@@ -54,6 +54,7 @@ public class O32 {
         queue.add(x);
 
         while (!queue.isEmpty()) {
+            // 先序遍历
             TreeNode head = queue.remove();
             System.out.print(head.val + " ");
 
@@ -79,6 +80,7 @@ public class O32 {
         int nextLevelCount = 0; // 下层节点数量
 
         while (!queue.isEmpty()) {
+            // 先序遍历
             TreeNode head = queue.remove();
             System.out.print(head.val + " ");
 
@@ -117,22 +119,23 @@ public class O32 {
 
         stacks[currentLevel].push(x);
         while (!stacks[currentLevel].isEmpty() || !stacks[nextLevel].isEmpty()) {
+            // 先序遍历
             TreeNode top = stacks[currentLevel].pop();
             System.out.print(top.val + " ");
 
             if (currentLevel == 0) { // ->: next level <-
                 if (top.left != null) {
-                    stacks[nextLevel].push(top.left);
+                    stacks[nextLevel].push(top.left); // 左
                 }
                 if (top.right != null) {
-                    stacks[nextLevel].push(top.right);
+                    stacks[nextLevel].push(top.right); // 右
                 }
             } else { // <-: next level ->
                 if (top.right != null) {
-                    stacks[nextLevel].push(top.right);
+                    stacks[nextLevel].push(top.right); // 右
                 }
                 if (top.left != null) {
-                    stacks[nextLevel].push(top.left);
+                    stacks[nextLevel].push(top.left); // 左
                 }
             }
 

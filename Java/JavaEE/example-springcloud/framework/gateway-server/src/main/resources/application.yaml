@@ -88,6 +88,7 @@ spring:
                 name: webflux-cb
 
 # core modules: https://resilience4j.readme.io/docs/getting-started#core-modules
+# example: https://www.baeldung.com/resilience4j
 resilience4j:
   # https://cloud.spring.io/spring-cloud-circuitbreaker/reference/html/index.html
   # see org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder
@@ -98,7 +99,7 @@ resilience4j:
         slidingWindowSize: 20
         # 断路器处于半开状态时允许的调用次数
         permittedNumberOfCallsInHalfOpenState: 5
-        # 调用失败阈值, 超过则断路器打开
+        # 调用失败阈值, 超过则断路器打开: 50%
         failureRateThreshold: 50
         # 断路器从开变为半开的等待时间
         waitDurationInOpenState: 15000

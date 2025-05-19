@@ -16,3 +16,6 @@ target/
 
 .bsp/
 .scala-build/
+
+
+data/
